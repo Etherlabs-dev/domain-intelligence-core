@@ -1,0 +1,1557 @@
+{
+  "eval_seed": 20260824,
+  "n_risk_assessment": 50,
+  "n_classification": 200,
+  "cases": [
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $5600.00 | Hour: 18 | TxnCount1h: 3 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 1 | RoundAmt: 1",
+      "expected_tier": "HIGH",
+      "expected_pattern": "money_mule"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $55.44 | Hour: 18 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $340.79 | Hour: 4 | TxnCount1h: 1 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $13.23 | Hour: 5 | TxnCount1h: 2 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $18.58 | Hour: 0 | TxnCount1h: 2 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $130.09 | Hour: 16 | TxnCount1h: 3 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $0.25 | Hour: 13 | TxnCount1h: 13 | MicroTxn: 1 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "HIGH",
+      "expected_pattern": "card_testing"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $67.74 | Hour: 20 | TxnCount1h: 1 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1014.97 | Hour: 23 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "account_takeover"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $201.42 | Hour: 22 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $19.19 | Hour: 8 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $2836.28 | Hour: 0 | TxnCount1h: 44 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "bust_out"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $4100.00 | Hour: 1 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 1",
+      "expected_tier": "HIGH",
+      "expected_pattern": "money_mule"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $47.18 | Hour: 17 | TxnCount1h: 3 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1959.93 | Hour: 12 | TxnCount1h: 45 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "bust_out"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $25.14 | Hour: 12 | TxnCount1h: 1 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $29.10 | Hour: 5 | TxnCount1h: 3 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $573.49 | Hour: 23 | TxnCount1h: 1 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "account_takeover"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $560.62 | Hour: 5 | TxnCount1h: 1 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $5400.00 | Hour: 21 | TxnCount1h: 7 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 1 | RoundAmt: 1",
+      "expected_tier": "HIGH",
+      "expected_pattern": "money_mule"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1.05 | Hour: 22 | TxnCount1h: 19 | MicroTxn: 1 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "HIGH",
+      "expected_pattern": "card_testing"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $72.08 | Hour: 16 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $8.14 | Hour: 5 | TxnCount1h: 2 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $118.82 | Hour: 21 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $64.85 | Hour: 7 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $4068.69 | Hour: 18 | TxnCount1h: 41 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "bust_out"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1058.01 | Hour: 20 | TxnCount1h: 46 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "bust_out"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $4600.00 | Hour: 1 | TxnCount1h: 7 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 1",
+      "expected_tier": "HIGH",
+      "expected_pattern": "money_mule"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1005.18 | Hour: 0 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "account_takeover"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $4338.23 | Hour: 6 | TxnCount1h: 44 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "bust_out"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $49.14 | Hour: 5 | TxnCount1h: 3 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $25.70 | Hour: 17 | TxnCount1h: 1 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $0.93 | Hour: 15 | TxnCount1h: 10 | MicroTxn: 1 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "HIGH",
+      "expected_pattern": "card_testing"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $59.60 | Hour: 6 | TxnCount1h: 2 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $9300.00 | Hour: 5 | TxnCount1h: 6 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 1",
+      "expected_tier": "HIGH",
+      "expected_pattern": "money_mule"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1083.32 | Hour: 2 | TxnCount1h: 12 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "bust_out"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1269.26 | Hour: 6 | TxnCount1h: 2 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "account_takeover"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $232.75 | Hour: 19 | TxnCount1h: 2 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $7300.00 | Hour: 0 | TxnCount1h: 6 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 1",
+      "expected_tier": "HIGH",
+      "expected_pattern": "money_mule"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $31.26 | Hour: 15 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $0.62 | Hour: 20 | TxnCount1h: 27 | MicroTxn: 1 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "HIGH",
+      "expected_pattern": "card_testing"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $0.61 | Hour: 18 | TxnCount1h: 6 | MicroTxn: 1 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "HIGH",
+      "expected_pattern": "card_testing"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $1750.41 | Hour: 5 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "account_takeover"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $20.85 | Hour: 2 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $9.88 | Hour: 2 | TxnCount1h: 3 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $912.98 | Hour: 1 | TxnCount1h: 1 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 1 | RoundAmt: 0",
+      "expected_tier": "CRITICAL",
+      "expected_pattern": "account_takeover"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $32.55 | Hour: 11 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $0.54 | Hour: 11 | TxnCount1h: 12 | MicroTxn: 1 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "HIGH",
+      "expected_pattern": "card_testing"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $34.40 | Hour: 1 | TxnCount1h: 4 | MicroTxn: 0 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "risk_assessment",
+      "instruction": "You are IOS Risk, an AI system for financial risk assessment. Analyse the following transaction and assess its fraud risk.",
+      "input": "Amount: $27.75 | Hour: 18 | TxnCount1h: 3 | MicroTxn: 0 | OffHours: 0 | LargeTxn: 0 | RoundAmt: 0",
+      "expected_tier": "LOW",
+      "expected_pattern": "legitimate"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $65.54 | Hour: 5 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.573 | TxnCount1h: 435",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $117.29 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.073 | TxnCount1h: 440",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $53.63 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.139 | TxnCount1h: 15202",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $10.99 | Hour: 0 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.309 | TxnCount1h: 6544",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $11.46 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.307 | TxnCount1h: 16475",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $4.49 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.335 | TxnCount1h: 14093",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $85.70 | Hour: 20 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.378 | TxnCount1h: 427",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $2.31 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.344 | TxnCount1h: 9073",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $249.67 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 1.207 | TxnCount1h: 409",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $0.69 | Hour: 1 | OffHours: 1 | MicroTxn: 1 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.350 | TxnCount1h: 3777",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $0.99 | Hour: 10 | OffHours: 0 | MicroTxn: 1 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.349 | TxnCount1h: 16577",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $19.95 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.273 | TxnCount1h: 13293",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $141.29 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.159 | TxnCount1h: 428",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $12.31 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.304 | TxnCount1h: 13271",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $217.99 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.518 | TxnCount1h: 16512",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $111.00 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.091 | TxnCount1h: 16864",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1.29 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.348 | TxnCount1h: 16331",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $142.52 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.171 | TxnCount1h: 409",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $157.04 | Hour: 5 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.312 | TxnCount1h: 453",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $9.99 | Hour: 3 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.313 | TxnCount1h: 3603",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $38.76 | Hour: 1 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.198 | TxnCount1h: 4986",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $123.13 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.016 | TxnCount1h: 401",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $15.00 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.293 | TxnCount1h: 17076",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $9.85 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.314 | TxnCount1h: 15599",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $114.55 | Hour: 20 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.099 | TxnCount1h: 447",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $23.01 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.261 | TxnCount1h: 17262",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $99.71 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.242 | TxnCount1h: 406",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $4.98 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.333 | TxnCount1h: 15221",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $71.71 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.513 | TxnCount1h: 429",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $95.50 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.029 | TxnCount1h: 5085",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $131.40 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.064 | TxnCount1h: 427",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $292.15 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.815 | TxnCount1h: 15373",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $53.33 | Hour: 0 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.691 | TxnCount1h: 419",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $134.18 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.091 | TxnCount1h: 438",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $118.09 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.065 | TxnCount1h: 430",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $6.28 | Hour: 14 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.328 | TxnCount1h: 16826",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $11.40 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.308 | TxnCount1h: 3944",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $53.04 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.694 | TxnCount1h: 402",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $0.00 | Hour: 19 | OffHours: 0 | MicroTxn: 1 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: -0.353 | TxnCount1h: 16901",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $0.76 | Hour: 17 | OffHours: 0 | MicroTxn: 1 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.350 | TxnCount1h: 16893",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $119.09 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.055 | TxnCount1h: 384",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $47.30 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.164 | TxnCount1h: 16588",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $50.58 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.717 | TxnCount1h: 424",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $321.63 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.933 | TxnCount1h: 15694",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $316.00 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.910 | TxnCount1h: 15633",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $148.94 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.233 | TxnCount1h: 405",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $150.00 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: 0.246 | TxnCount1h: 14900",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $90.44 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.332 | TxnCount1h: 420",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $131.98 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.174 | TxnCount1h: 15678",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $14.53 | Hour: 0 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.295 | TxnCount1h: 6028",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $11.56 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.307 | TxnCount1h: 11227",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $4.49 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.335 | TxnCount1h: 15369",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $372.78 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 1 | AmtZscore: 2.396 | TxnCount1h: 382",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $138.71 | Hour: 3 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.134 | TxnCount1h: 429",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $92.83 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.309 | TxnCount1h: 393",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $184.66 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.578 | TxnCount1h: 423",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $13.52 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.299 | TxnCount1h: 16195",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $66.76 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.561 | TxnCount1h: 438",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $19.59 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.275 | TxnCount1h: 16586",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $139.55 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.143 | TxnCount1h: 410",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1023.93 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 1 | AmtZscore: 3.741 | TxnCount1h: 16618",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $112.95 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.115 | TxnCount1h: 398",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $63.90 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.098 | TxnCount1h: 5795",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $149.21 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.236 | TxnCount1h: 430",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $7.49 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.323 | TxnCount1h: 13159",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $227.30 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.556 | TxnCount1h: 16923",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $73.41 | Hour: 3 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.497 | TxnCount1h: 432",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $135.65 | Hour: 3 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.105 | TxnCount1h: 437",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1.00 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.349 | TxnCount1h: 5018",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $83.32 | Hour: 4 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.401 | TxnCount1h: 407",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $47.85 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.162 | TxnCount1h: 19548",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $133.76 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.087 | TxnCount1h: 394",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $128.15 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.032 | TxnCount1h: 415",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $115.24 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.092 | TxnCount1h: 397",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $205.65 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.781 | TxnCount1h: 420",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $15.00 | Hour: 16 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.293 | TxnCount1h: 17247",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1.29 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.348 | TxnCount1h: 16191",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $97.96 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.259 | TxnCount1h: 403",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $28.49 | Hour: 4 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.239 | TxnCount1h: 2239",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $175.78 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.350 | TxnCount1h: 15712",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $110.00 | Hour: 16 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: 0.087 | TxnCount1h: 17281",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $99.00 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.043 | TxnCount1h: 16127",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $300.81 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 1.701 | TxnCount1h: 404",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $122.77 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.020 | TxnCount1h: 435",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $248.26 | Hour: 14 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 1.193 | TxnCount1h: 403",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $254.76 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.665 | TxnCount1h: 19680",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $0.76 | Hour: 18 | OffHours: 0 | MicroTxn: 1 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.350 | TxnCount1h: 16241",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $3.79 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.338 | TxnCount1h: 16956",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $51.86 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.705 | TxnCount1h: 418",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $360.00 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: 1.086 | TxnCount1h: 15487",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1.98 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.345 | TxnCount1h: 15456",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $5.00 | Hour: 17 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.333 | TxnCount1h: 16821",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $10.55 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.311 | TxnCount1h: 15851",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $100.00 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: 0.047 | TxnCount1h: 13055",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $265.65 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.709 | TxnCount1h: 16410",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $50.00 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: -0.153 | TxnCount1h: 11980",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $45.51 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.171 | TxnCount1h: 12205",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $110.16 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.142 | TxnCount1h: 429",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $127.73 | Hour: 20 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.028 | TxnCount1h: 425",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $8.99 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.317 | TxnCount1h: 16092",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $75.29 | Hour: 4 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.478 | TxnCount1h: 417",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $55.85 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.130 | TxnCount1h: 16611",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $158.87 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.329 | TxnCount1h: 411",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $124.56 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.002 | TxnCount1h: 395",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $52.80 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.142 | TxnCount1h: 16556",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $150.86 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.252 | TxnCount1h: 400",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $4.99 | Hour: 14 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.333 | TxnCount1h: 17101",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $529.00 | Hour: 3 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 1 | AmtZscore: 1.762 | TxnCount1h: 3428",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $141.60 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.162 | TxnCount1h: 439",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $268.00 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.718 | TxnCount1h: 16236",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $176.11 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.496 | TxnCount1h: 423",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $45.00 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.173 | TxnCount1h: 13576",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $7.52 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.323 | TxnCount1h: 15731",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $94.48 | Hour: 4 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.293 | TxnCount1h: 411",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $17.47 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.283 | TxnCount1h: 13252",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $119.94 | Hour: 7 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.047 | TxnCount1h: 406",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $77.87 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.454 | TxnCount1h: 433",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $38.52 | Hour: 14 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.834 | TxnCount1h: 407",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $198.58 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.441 | TxnCount1h: 15748",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $10.59 | Hour: 14 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.311 | TxnCount1h: 16661",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $71.31 | Hour: 4 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.517 | TxnCount1h: 411",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $17.99 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.281 | TxnCount1h: 18390",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $70.84 | Hour: 1 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.521 | TxnCount1h: 433",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $216.67 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.888 | TxnCount1h: 390",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $340.48 | Hour: 16 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 1.008 | TxnCount1h: 17304",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $110.69 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.136 | TxnCount1h: 396",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $2.58 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.343 | TxnCount1h: 16079",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $67.88 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.550 | TxnCount1h: 426",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $106.22 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.071 | TxnCount1h: 16332",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $3.12 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.341 | TxnCount1h: 5116",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $453.72 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 1 | AmtZscore: 1.461 | TxnCount1h: 15199",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $229.27 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 1.010 | TxnCount1h: 428",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $655.05 | Hour: 3 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 1 | AmtZscore: 5.124 | TxnCount1h: 426",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $153.72 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.279 | TxnCount1h: 401",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $294.04 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 1.635 | TxnCount1h: 233",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $104.22 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.199 | TxnCount1h: 441",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $2.69 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.342 | TxnCount1h: 16437",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $165.56 | Hour: 17 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.394 | TxnCount1h: 387",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $153.34 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.276 | TxnCount1h: 402",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $320.01 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.926 | TxnCount1h: 17349",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $79.42 | Hour: 17 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.036 | TxnCount1h: 16820",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $18.40 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.280 | TxnCount1h: 14264",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $9.51 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.315 | TxnCount1h: 19169",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $29.00 | Hour: 14 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.237 | TxnCount1h: 16986",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $35.00 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.213 | TxnCount1h: 16498",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $10.71 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.310 | TxnCount1h: 15825",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $720.38 | Hour: 17 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 1 | AmtZscore: 2.527 | TxnCount1h: 16493",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $24.05 | Hour: 19 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.974 | TxnCount1h: 406",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $6.45 | Hour: 0 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.327 | TxnCount1h: 4496",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $12.57 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.303 | TxnCount1h: 15230",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $44.48 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.776 | TxnCount1h: 440",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $201.27 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.739 | TxnCount1h: 418",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1.29 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.348 | TxnCount1h: 9703",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $5.50 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.331 | TxnCount1h: 11685",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $12.31 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.304 | TxnCount1h: 16289",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $10.93 | Hour: 7 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.310 | TxnCount1h: 6175",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1.00 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.349 | TxnCount1h: 15701",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $21.17 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.269 | TxnCount1h: 11903",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $90.48 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.009 | TxnCount1h: 16329",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $160.11 | Hour: 22 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.341 | TxnCount1h: 427",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $30.14 | Hour: 20 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.233 | TxnCount1h: 18647",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $9.99 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.313 | TxnCount1h: 15437",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $6.06 | Hour: 17 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.329 | TxnCount1h: 15876",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $32.96 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.888 | TxnCount1h: 394",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $153.73 | Hour: 5 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.280 | TxnCount1h: 417",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $0.76 | Hour: 6 | OffHours: 1 | MicroTxn: 1 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.350 | TxnCount1h: 5400",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $149.25 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.236 | TxnCount1h: 426",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $336.00 | Hour: 10 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.990 | TxnCount1h: 16705",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $137.36 | Hour: 20 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.196 | TxnCount1h: 18873",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $172.71 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.337 | TxnCount1h: 4288",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $149.89 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.242 | TxnCount1h: 414",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $245.70 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.629 | TxnCount1h: 15787",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $54.90 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.134 | TxnCount1h: 12715",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $70.13 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.528 | TxnCount1h: 442",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $99.99 | Hour: 7 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.047 | TxnCount1h: 8495",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $5.34 | Hour: 15 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.332 | TxnCount1h: 17257",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $123.45 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.013 | TxnCount1h: 450",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $16.20 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.288 | TxnCount1h: 12006",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $32.20 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.224 | TxnCount1h: 3431",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $420.16 | Hour: 12 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 1 | AmtZscore: 1.327 | TxnCount1h: 15972",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $74.44 | Hour: 11 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.487 | TxnCount1h: 414",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $99.33 | Hour: 14 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.044 | TxnCount1h: 15900",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $196.70 | Hour: 0 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.695 | TxnCount1h: 410",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $216.49 | Hour: 6 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.886 | TxnCount1h: 437",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $50.00 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: -0.153 | TxnCount1h: 16481",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $66.80 | Hour: 4 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.561 | TxnCount1h: 406",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $16.99 | Hour: 2 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.285 | TxnCount1h: 3405",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $1.00 | Hour: 3 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.349 | TxnCount1h: 3154",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $213.55 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.858 | TxnCount1h: 386",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $88.34 | Hour: 16 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.352 | TxnCount1h: 399",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $84.69 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.388 | TxnCount1h: 395",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $104.70 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.194 | TxnCount1h: 407",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $219.80 | Hour: 21 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.526 | TxnCount1h: 19733",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $79.37 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.439 | TxnCount1h: 409",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $127.56 | Hour: 23 | OffHours: 1 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.027 | TxnCount1h: 400",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $89.99 | Hour: 13 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.007 | TxnCount1h: 15200",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $47.70 | Hour: 8 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.163 | TxnCount1h: 9562",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $320.00 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 1 | LargeTxn: 0 | AmtZscore: 0.926 | TxnCount1h: 16496",
+      "expected_label": "FRAUD"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $8.36 | Hour: 18 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: -0.320 | TxnCount1h: 16566",
+      "expected_label": "LEGITIMATE"
+    },
+    {
+      "task": "classification",
+      "instruction": "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided.",
+      "input": "Amount: $127.09 | Hour: 9 | OffHours: 0 | MicroTxn: 0 | RoundAmt: 0 | LargeTxn: 0 | AmtZscore: 0.022 | TxnCount1h: 424",
+      "expected_label": "FRAUD"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# IOS Risk Intelligence Core — Dependencies
+# Core training stack
+torch
+torchvision
+torchaudio
+transformers
+datasets
+peft
+accelerate
+bitsandbytes
+unsloth
+trl
+
+# Logging & tracking
+wandb
+
+# Evaluation
+scikit-learn
+pandas
+numpy
+
+# Utilities
+tqdm
+pyyaml
+pytest

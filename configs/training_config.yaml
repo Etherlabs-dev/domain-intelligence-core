@@ -1,0 +1,49 @@
+# IOS Risk Intelligence Core — Fine-Tuning Configuration
+# Model & Quantization
+model:
+  base_model: "unsloth/Meta-Llama-3.1-8B-Instruct"
+  max_seq_length: 1024
+  load_in_4bit: true
+
+# LoRA Adapters (Sticky Notes)
+lora:
+  r: 16
+  alpha: 16
+  dropout: 0.05
+  bias: "none"
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+# Dataset
+dataset:
+  name: "Etherlabs/ios-risk-finetune-v1"
+  val_split: 0.05
+  max_samples: null
+
+# Optimization (T4 GPU optimized)
+training:
+  learning_rate: 0.0002 # 2e-4
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8 # Effective batch size = 16
+  warmup_steps: 100
+  lr_scheduler_type: "cosine"
+  weight_decay: 0.01
+  optim: "adamw_8bit"
+  seed: 42
+
+# Checkpointing & Logging
+logging:
+  output_dir: "./outputs/ios-risk-llama3-v1"
+  save_strategy: "steps"
+  save_steps: 200
+  save_total_limit: 3
+  logging_steps: 10
+  report_to: "wandb"
+  wandb_project: "ios-risk-domain-core"
+  wandb_run_name: "llama3-8b-qlora-v1"

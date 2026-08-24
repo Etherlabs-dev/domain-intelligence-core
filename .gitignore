@@ -1,0 +1,29 @@
+# ── Secrets — never commit ────────────────────────────────────────
+.env
+.env.*
+!.env.example
+kaggle.json
+*.pem
+*.key
+secrets.yaml
+secrets.json
+
+# ── Python ────────────────────────────────────────────────────────
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ── Training artifacts (adapters are pushed to HF, not git) ───────
+outputs/
+checkpoints/
+wandb/
+*.safetensors
+*.bin
+
+# ── Editor / OS ───────────────────────────────────────────────────
+.history/
+.vscode/
+.DS_Store
+.ipynb_checkpoints/

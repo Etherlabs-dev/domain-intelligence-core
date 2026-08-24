@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# Blocks commits containing credentials. Tracked in-repo so it survives a clone.
+# Enable after cloning with:  git config core.hooksPath .githooks
+set -uo pipefail
+
+# name:regex
+PATTERNS=(
+  "HuggingFace token:hf_[A-Za-z0-9]{34,}"
+  "W&B API key:wandb_v1_[A-Za-z0-9_-]{30,}"
+  "OpenAI key:sk-[A-Za-z0-9_-]{20,}"
+  "AWS access key:AKIA[0-9A-Z]{16}"
+  "GitHub token:gh[pousr]_[A-Za-z0-9]{30,}"
+  "GitHub PAT:github_pat_[A-Za-z0-9_]{30,}"
+  "Kaggle key block:\"username\"[[:space:]]*:[[:space:]]*\".*\"[[:space:]]*,[[:space:]]*\"key\""
+)
+
+staged=$(git diff --cached --name-only --diff-filter=ACM)
+[ -z "$staged" ] && exit 0
+
+found=0
+while IFS= read -r file; do
+  [ -f "$file" ] || continue
+  for entry in "${PATTERNS[@]}"; do
+    label="${entry%%:*}"
+    regex="${entry#*:}"
+    if hits=$(git show ":$file" 2>/dev/null | grep -nEo "$regex" | head -3); then
+      if [ -n "$hits" ]; then
+        [ $found -eq 0 ] && printf '\n\033[31mCOMMIT BLOCKED — credentials found in staged changes\033[0m\n\n'
+        found=1
+        printf '  %s\n' "$file"
+        while IFS= read -r h; do
+          printf '    line %s  %s  %s...\n' "${h%%:*}" "$label" "$(echo "${h#*:}" | cut -c1-14)"
+        done <<< "$hits"
+      fi
+    fi
+  done
+done <<< "$staged"
+
+if [ $found -eq 1 ]; then
+  cat <<'MSG'
+
+  Fix before committing:
+    python3 scripts/scrub_secrets.py        # rewrite inline tokens as env lookups
+    git add -u && git commit
+
+  To commit anyway (you are publishing these credentials):
+    git commit --no-verify
+
+MSG
+  exit 1
+fi
+exit 0
