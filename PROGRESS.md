@@ -184,3 +184,99 @@ Publish as `Llama-3.1-8B-IOS-Risk-v1`.
 | Regulatory grounding via eCFR | in progress |
 | Second T4 idle — needs `torchrun` against `train/` | open |
 | Model card with the Llama naming fix and stated limitations | pending eval |
+
+---
+
+## Stage 6 — Quota loss and the regulatory source (2026-08-25 → 2026-08-27)
+
+### A 12-hour hang from one careless cell
+
+The first eval notebook cloned this repository inside Step 2 to fetch the
+scoring code. The repository is **private**. `git clone` prompted:
+
+```
+Username for 'https://github.com':
+```
+
+A Kaggle batch session has no stdin, so git blocked on that prompt until Kaggle
+killed the session at its 12-hour ceiling. It produced nothing and consumed a
+large share of the weekly GPU quota — 32h25m of 30h were spent, locking the
+account out for ~39 hours.
+
+**Fix:** the notebook now makes no network call except the base model download.
+`testset.json` and `domain_eval.py` live in the `ios-risk-eval-assets` Kaggle
+dataset, attached as a normal input. Three guards were added:
+
+- GPU capability check runs **first**, so an API-pushed P100 session dies in
+  seconds rather than hanging on model load
+- the adapter search **requires** a directory matching `v2` and raises with a
+  listing rather than silently scoring the v1 adapter
+- `kernel-metadata.json` declares both inputs so a push attaches them itself
+
+**Learnings**
+
+- Never push a notebook that can block on stdin. Anything interactive must fail
+  fast in a batch session, and `GIT_TERMINAL_PROMPT=0` is the minimum guard.
+- A notebook that depends on a private repo depends on credentials it does not
+  have. Ship assets as data, not as a clone.
+- Kaggle quota is visible in the account menu tooltip: used, reserved, and time
+  to reset. It is a rolling window, not a fixed weekly date.
+
+### Regulatory grounding — BSA via the eCFR API
+
+`sec_edgar.py` was retired rather than fixed. Its answers were templated from
+the **search query**, not the filing text, so every chunk retrieved for one
+query carried an identical fabricated answer. Real input, fake output — the
+worst possible direction, and the same defect class that made v1 unusable.
+
+Replaced by `foundry/sources/bsa_regulations.py`, which builds pairs from
+31 CFR Chapter X via the public eCFR API:
+
+```
+468 pairs · 117 CFR sections · 328 unique questions · 117 unique answers
+Parts 1010, 1020, 1021, 1022, 1023, 1025
+```
+
+The direction is reversed: the **answer** is verbatim regulatory text with its
+citation, and only the **question** is templated.
+
+**Learnings**
+
+- If exactly one half of an instruction pair must be synthetic, it must be the
+  question. A templated question with a real answer teaches real content; a real
+  question with a templated answer teaches fabrication.
+- Each answer appears ~4 times under different questions. Good for citation
+  recall, mild memorisation risk. Acceptable for a recall task.
+- These pairs teach regulatory language and citation, not judgement. The model
+  learns what a rule requires, not when it applies to an ambiguous fact pattern.
+  That is what the typology cases are for.
+
+### Distillation provider — licence check
+
+An earlier claim in this project that NVIDIA Nemotron is "explicitly licensed
+for generating synthetic training data" was **wrong** and was corrected after
+reading the licence. The NVIDIA Open Model License says:
+
+> "NVIDIA claims no ownership rights in outputs. You are responsible for outputs
+> and their subsequent uses."
+
+but is **silent** on training other models on those outputs. The clause that
+does address it applies only to NVIDIA **Cosmos** models, a different family.
+Silence is not prohibition, but it is inference rather than permission.
+
+Apache 2.0 models (Qwen, Mistral, Mixtral) and MIT models (DeepSeek) have no
+output clause at all, so there is nothing to interpret.
+
+Nemotron was chosen anyway, via NVIDIA NIM's free tier (~1,000 credits, no
+card, OpenAI-compatible at `https://integrate.api.nvidia.com/v1`). The licence's
+attribution requirement is met by the repository `NOTICE` file.
+
+**Learning:** verify a licence before recommending a model on it. "Widely
+understood to permit X" is not a licence term.
+
+### Credit arithmetic
+
+1,000 free credits do not cover 6,000 records, and neither does the 5,000
+extension. Partial distillation is acceptable: the model needs to learn that
+explanations *vary*, and a substantial distilled minority mixed with templated
+majority teaches that.
