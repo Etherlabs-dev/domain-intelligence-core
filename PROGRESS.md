@@ -536,16 +536,24 @@ quality `> 0.60`, and unsupported-claim rate `<= 0.05`.
 
 ### Current completion boundary
 
-Complete locally: Foundry v3, strict evaluation assets, training/inference code,
-notebook preflights, tests, and documentation.
+Complete: Foundry v3, strict evaluation assets, training/inference code,
+notebook preflights, tests, documentation, and public dataset publication.
+
+The public artifact was independently downloaded after publication on
+2026-08-29. It contains 20,606 JSONL records, 20,606 unique instruction/input
+pairs, 10,025 unique outputs, and all required instruction/input/output fields.
+Its downloaded SHA-256 is
+`485f02df11b2e1dd4b1dbe0bb4dd9a68615735bbcf64cc7fbbb08933008ca075`,
+matching the committed manifest exactly:
+`https://huggingface.co/datasets/Etherlabs/ios-risk-finetune-v3`.
 
 Still external/pending:
 
-1. publish and re-download `Etherlabs/ios-risk-finetune-v3`;
-2. run one fresh v3 Kaggle training version;
-3. run the base-versus-tuned v3 evaluation;
-4. publish `Etherlabs/Llama-3.1-8B-IOS-Risk-v1` only if the frozen gates pass;
-5. document final measured results and limitations.
+1. run one fresh v3 Kaggle training version;
+2. run the base-versus-tuned v3 evaluation;
+3. publish `Etherlabs/Llama-3.1-8B-IOS-Risk-v1` only if the frozen gates pass;
+4. document final measured results and limitations.
 
-No new Kaggle run should begin until step 1 is verified and the local notebook
-is copied exactly into the Kaggle draft.
+The publication gate is now verified. The next action is to copy the local
+training notebook exactly into the Kaggle draft and run its preflight before
+starting the paid-in-quota GPU training step.

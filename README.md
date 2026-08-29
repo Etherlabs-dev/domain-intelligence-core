@@ -4,9 +4,10 @@ Project 03 of IntelligenceOS: adapt Llama 3.1 8B Instruct to financial-risk
 classification, evidence-grounded fraud/AML assessment, and BSA regulatory
 recall—then prove what changed against the untouched base model.
 
-> **Current status:** code, v3 data, and evaluation assets are locally validated.
-> The final v3 Kaggle training and base-versus-tuned evaluation have not yet run.
-> No model-improvement or production-impact claim is made before those results.
+> **Current status:** code and evaluation assets are validated, and the exact v3
+> dataset is publicly verified on Hugging Face. The final v3 Kaggle training and
+> base-versus-tuned evaluation have not yet run. No model-improvement or
+> production-impact claim is made before those results.
 
 ## Final experiment design
 
@@ -63,8 +64,8 @@ python -m json.tool notebooks/03_eval_results.ipynb >/dev/null
 
 ## Release sequence
 
-1. Publish and re-download `ios-risk-finetune-v3`; verify 20,606 rows and its
-   committed SHA-256 manifest.
+1. **Complete:** published and re-downloaded `ios-risk-finetune-v3`; verified
+   20,606 rows and SHA-256 `485f02df11b2e1dd4b1dbe0bb4dd9a68615735bbcf64cc7fbbb08933008ca075`.
 2. In Kaggle, replace the training notebook with the verified local copy and
    run a fresh version. Do not attach a v1/v2 adapter.
 3. Confirm the log prints the v3 dataset, its diversity gate, fresh base-model
