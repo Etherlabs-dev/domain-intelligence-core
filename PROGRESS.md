@@ -280,3 +280,158 @@ understood to permit X" is not a licence term.
 extension. Partial distillation is acceptable: the model needs to learn that
 explanations *vary*, and a substantial distilled minority mixed with templated
 majority teaches that.
+
+---
+
+## Stage 7 — Evaluation results (2026-08-29)
+
+`notebooks/03_eval_results.ipynb`, Kaggle version `eval-v2-vs-base`, 1229.9s on
+T4 x2. Base model and tuned adapter over the **same** 250 held-out cases.
+
+### Project 03 criteria: PASS
+
+**Risk assessment — 50 held-out scenario prompts**
+
+| metric | base | tuned | delta | target |
+|---|---|---|---|---|
+| tier accuracy | 0.2400 | **0.9800** | +0.7400 | >0.70 PASS |
+| avg quality | 0.3133 | **0.9000** | +0.5867 | >0.60 PASS |
+| reasoning rate | 0.6800 | 1.0000 | +0.3200 | — |
+| action rate | 0.0200 | 0.7200 | +0.7000 | — |
+
+**Classification — 200 balanced held-out transactions**
+
+| metric | base | tuned | XGBoost (Project 01) |
+|---|---|---|---|
+| precision | 0.0000 | **0.9310** | 0.9011 |
+| recall | 0.0000 | 0.8100 | 0.8367 |
+| F1 | 0.0000 | **0.8663** | 0.8677 |
+| unparseable | 200 / 200 | **0** | n/a |
+
+The 8B fine-tune matches the purpose-built gradient-boosted baseline on F1
+(0.8663 vs 0.8677) with higher precision.
+
+**Read the base column correctly.** Base scored 0.0 because all 200 of its
+responses were unparseable — untouched Llama writes prose instead of emitting
+`FRAUD`/`LEGITIMATE`. It means "cannot perform the task in this format", not
+"bad at detecting fraud". Do not publish it as the latter.
+
+### The open defect: fabricated scores in 66% of outputs
+
+33 of 50 risk assessments append an invented numeric score:
+
+```
+"AML risk score: 29."
+"Fraud risk score: 0.435. Probability of fraud: 0.011."
+"A model confidence score of 0.449"
+"Transaction history shows no history of fraud"   <- no history was provided
+```
+
+The scales are mutually incoherent — 29 and 22 read as 0-100, 0.435 and 0.011
+as probabilities — so none of them is a metric. The tier, typology and reasoning
+are correct; the trailing number is noise.
+
+**Root cause: no EOS token in the training format.** Confirmed twice over:
+
+1. The v2 training set contains **zero** occurrences of "risk score",
+   "probability", "confidence" or "transaction history" across all 20,000
+   outputs. The model was never taught this.
+2. `notebooks/02_training_run.ipynb` formats examples as
+   `### Response:\n{output}` and never appends `tokenizer.eos_token`.
+
+The model is never shown where an answer ends, so it never learns to stop. It
+produces the correct assessment, reaches the end of what it was taught, and
+continues with whatever seems plausible. The invented scores are autocomplete
+filling silence, not a reasoning failure.
+
+**Fix:** append `tokenizer.eos_token` to each formatted training example. One
+line. This should be verified by re-running the eval and checking the
+"responses containing an invented probability or score" count falls from 33/50.
+
+---
+
+## Current state (2026-08-29)
+
+### Artifacts that exist
+
+| Artifact | Where | State |
+|---|---|---|
+| `Etherlabs/ios-risk-finetune-v1` | HuggingFace, public | **Defective** — 1 instruction, 2 outputs. Do not train on it. |
+| `Etherlabs/ios-risk-finetune-v2` | HuggingFace, private | 20,000 rows, 2 instructions, 9,035 unique outputs |
+| v2 adapter | Kaggle `ios-risk-brain-v1-fine-tune`, latest version, `ios-risk-llama3-v2/` | Passes Project 03. Not yet on HuggingFace. |
+| `ios-risk-eval-assets` | Kaggle dataset, private | `testset.json` + `domain_eval.py` |
+| Eval result | Kaggle `ios-risk-project03-eval`, `eval-v2-vs-base` | PASS, table above |
+
+### v3 inputs
+
+| Source | Count | State |
+|---|---|---|
+| AML typology pairs | 6,000 | generated, `data/processed/aml_typology_pairs.jsonl` |
+| AML distilled | ~3,150 of 6,000 | **in progress**, see below |
+| BSA regulation pairs | 468 | generated, 117 CFR sections |
+
+### The distillation job
+
+Running on Ugo's Mac, launched with `nohup`, writing to
+`data/processed/aml_sample_distilled.jsonl` and logging to
+`/tmp/distill_full.log`. Model `nvidia/nemotron-3-super-120b-a12b` via NVIDIA
+NIM. 98% keep rate, `failed=0`.
+
+Throughput is 4-11 records/min — NVIDIA throttles hard, well below its
+advertised 40 rpm, and the log shows thousands of handled `RateLimitError`
+retries. Those are expected and are not failures.
+
+**It is fully resumable.** Every completed record is a line in the output. Re-run
+the identical command and it hashes what is on disk and continues. Nothing is
+ever redone or lost. To resume:
+
+```bash
+cd ~/Documents/ios-risk-data-foundry
+export DISTILL_API_KEY=<nvapi key>
+./venv/bin/python -m scripts.distill_reasoning \
+  --in data/processed/aml_typology_pairs.jsonl \
+  --out data/processed/aml_sample_distilled.jsonl \
+  --base-url https://integrate.api.nvidia.com/v1 \
+  --model nvidia/nemotron-3-super-120b-a12b --rpm 35
+```
+
+---
+
+## What remains
+
+Ordered by value, highest first.
+
+1. **Fix the EOS bug and retrain.** One line in the notebook's formatter, then
+   one ~3h Kaggle session. Re-run the eval and confirm the fabricated-score
+   count drops. This is the single highest-value change available: the model
+   already passes, and this removes its only serious defect.
+
+2. **Publish.** The adapter is not yet on HuggingFace. Two constraints:
+   - The Llama 3.1 Community Licence requires `"Llama"` at the **start** of the
+     model name. `Etherlabs/ios-risk-llama3-v1` does not comply. Publish as
+     **`Llama-3.1-8B-IOS-Risk-v1`**, with a "Built with Llama" attribution and
+     a NOTICE file.
+   - The model card must state the templated-reasoning limitation and, until
+     the EOS fix lands, the fabricated-score rate.
+
+3. **Build v3** — distilled AML + BSA regulation + v2 data. Only worth doing
+   after the EOS fix, since the fix may change what v3 needs to address.
+
+4. **Rotate the exposed keys.** The HF token and W&B key were in the notebook
+   and in chat; the NVIDIA key was pasted into chat. Ugo decided to defer this
+   until generation finished. It has not been done.
+
+5. **Idle second T4.** Unsloth uses one of two GPUs. Needs `torchrun` against
+   the `train/` package rather than notebook cells. Open since stage 2.
+
+### Traps a new agent should know
+
+- `kaggle kernels push` **creates and runs** a version and resets the
+  accelerator to P100. Never use it to sync code before a training run.
+- Kaggle's API cannot set the accelerator. T4 x2 must be chosen in the UI.
+- Never put anything in a Kaggle notebook that can block on stdin. A `git clone`
+  of a private repo cost 12 hours of quota this way.
+- Do not trust `dataset_manifest.json` or a published dataset without inspecting
+  instruction cardinality and label distribution first. Two lines of Python
+  would have caught the v1 defect before ~7 GPU-hours.
+- Eval loss across different datasets is not comparable.

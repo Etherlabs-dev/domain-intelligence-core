@@ -27,7 +27,11 @@ def scrub(text: str) -> tuple[str, int]:
     n = 0
     for var, value_re in SECRETS.items():
         # HF_TOKEN = "hf_xxx"   ->   HF_TOKEN = os.environ.get("HF_TOKEN", "")
-        pattern = rf'({re.escape(var)}\s*=\s*)["\']{value_re}["\']'
+        # .ipynb stores source as JSON strings, so the quotes around a literal
+        # arrive escaped: HF_TOKEN = \"hf_...\". Match bare and escaped both,
+        # or the scrubber silently reports success on a notebook it did not touch.
+        q = r'(?:\\?["\'])'
+        pattern = rf'({re.escape(var)}\s*=\s*){q}{value_re}{q}'
         text, k = re.subn(pattern, rf'\1os.environ.get("{var}", "")', text)
         n += k
         # any surviving bare literal (e.g. inline in a call)
