@@ -8,8 +8,10 @@ Notebooks keep tokens inline while iterating on Kaggle (convenient, and the
 Kaggle notebook is private). This turns them into env reads so the same file
 is safe to publish, without touching any other code.
 """
+
 import re
 import sys
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -31,13 +33,30 @@ def scrub(text: str) -> tuple[str, int]:
         # arrive escaped: HF_TOKEN = \"hf_...\". Match bare and escaped both,
         # or the scrubber silently reports success on a notebook it did not touch.
         q = r'(?:\\?["\'])'
-        pattern = rf'({re.escape(var)}\s*=\s*){q}{value_re}{q}'
+        pattern = rf"({re.escape(var)}\s*=\s*){q}{value_re}{q}"
         text, k = re.subn(pattern, rf'\1os.environ.get("{var}", "")', text)
         n += k
         # any surviving bare literal (e.g. inline in a call)
-        text, k = re.subn(rf'["\']{value_re}["\']', f'os.environ.get("{var}", "")', text)
+        text, k = re.subn(
+            rf'["\']{value_re}["\']', f'os.environ.get("{var}", "")', text
+        )
         n += k
     return text, n
+
+
+def scrub_notebook(text: str) -> tuple[str, int]:
+    """Scrub code cells structurally so replacements cannot corrupt JSON."""
+    notebook = json.loads(text)
+    total = 0
+    for cell in notebook.get("cells", []):
+        if cell.get("cell_type") != "code":
+            continue
+        source = "".join(cell.get("source", []))
+        cleaned, count = scrub(source)
+        if count:
+            cell["source"] = cleaned.splitlines(keepends=True)
+            total += count
+    return json.dumps(notebook, indent=1, ensure_ascii=False) + "\n", total
 
 
 def main() -> int:
@@ -45,14 +64,18 @@ def main() -> int:
     for pattern in TARGETS:
         for path in ROOT.glob(pattern):
             original = path.read_text(encoding="utf-8")
-            cleaned, n = scrub(original)
+            cleaned, n = (
+                scrub_notebook(original) if path.suffix == ".ipynb" else scrub(original)
+            )
             if n:
                 path.write_text(cleaned, encoding="utf-8")
                 print(f"  {path.relative_to(ROOT)}: {n} secret(s) rewritten")
                 total += n
 
     if total:
-        print(f"\n{total} secret(s) scrubbed. Set them in your shell before running locally:")
+        print(
+            f"\n{total} secret(s) scrubbed. Set them in your shell before running locally:"
+        )
         for var in SECRETS:
             print(f"  export {var}=...")
         print("On Kaggle, use Add-ons -> Secrets, or paste back in temporarily.")

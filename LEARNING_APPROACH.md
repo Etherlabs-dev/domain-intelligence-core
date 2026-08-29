@@ -1,144 +1,78 @@
-# Project 03 — Domain Intelligence Core
-## Learning Approach & Context for Any Agent or IDE
+# Project 03 — Learning and Handoff Guide
 
----
+## What we are building
 
-## What This Project Is
+IOS Risk Brain #1 is a Llama 3.1 8B model adapted to three bounded skills:
 
-This is **IOS Risk Project 03: Domain Intelligence Core** — the fine-tuning phase of the IntelligenceOS build roadmap.
+1. classify public benchmark transactions as `FRAUD` or `LEGITIMATE`;
+2. explain supplied fraud/AML evidence, assign a tier, and recommend a review action;
+3. recall selected Bank Secrecy Act rules with their controlling CFR citation.
 
-The goal is to fine-tune **Llama 3.1 8B Instruct** on **276,772 domain-specific instruction pairs** (published on HuggingFace as `Etherlabs/ios-risk-finetune-v1` from Project 02) using **QLoRA + Unsloth** to produce **IOS Risk Brain #1**: a domain-specific LLM that understands financial risk, fraud patterns, AML typologies, and regulatory language at a level no general-purpose model can match.
+It is not being trained to discover fraud “from first principles” without data.
+Its reasoning ceiling is the evidence in each prompt. Real deployment would need
+institution-specific account, merchant, device, identity, network, dispute, and
+case-outcome data that this public project does not possess.
 
-The output model will be published to HuggingFace under the Etherlabs org as `Etherlabs/ios-risk-llama3-v1`.
+## Concepts the owner should be able to explain
 
-**This project is not about using AI tools. It is about building one.**
+- **LoRA:** train small adapter matrices while preserving the base model weights.
+- **QLoRA:** keep the base model in 4-bit memory while training LoRA adapters.
+- **Rank 16:** the adapter’s update capacity; a practical middle ground, not a
+  measure of model intelligence.
+- **One epoch:** one pass over v3; enough to test adaptation without paying for
+  repeated memorization before evaluation proves it useful.
+- **Training loss:** measures imitation of training answers, not fraud expertise.
+- **Held-out evaluation:** questions excluded from training that show whether a
+  behaviour generalizes beyond memorized examples.
+- **Data leakage:** a test answer, record, or source appears in training and makes
+  the final score falsely optimistic.
+- **Unsupported claim:** the model states a probability, score, history, device,
+  location, or other fact not supplied by the prompt.
 
----
+## What happened historically
 
-## Compute Strategy — Zero Spend
+- v1 trained successfully in the mechanical sense, but learned a nearly trivial
+  99.1%-legitimate label distribution.
+- v2 trained on a richer 20,000-row set and produced plausible prose, but its
+  original evaluation was contaminated and its outputs invented precision.
+- A previous explanation blamed EOS for the invented claims without proving it.
+  Current code treats that as an unverified hypothesis: it appends EOS explicitly
+  and asserts the tokenized final ID before training, while also fixing the data
+  and adding unsupported-claim evaluation.
+- v3 was rebuilt with 20,606 unique prompts and source-level test separation.
 
-Training runs on **Kaggle's free GPU tier** (T4x2 = 32GB VRAM combined, 30 hrs/week free).
+## How collaboration should work now
 
-No paid compute is being used for this project. The T4-adjusted training config is:
+The owner has explicitly authorized end-to-end implementation, followed by a
+plain-language walkthrough. Agents should therefore implement complete,
+testable changes when requested, but must still explain:
 
-```python
-per_device_train_batch_size: 2
-gradient_accumulation_steps: 8   # keeps effective batch size at 16
-max_seq_length: 1024
-max_samples: 20000               # per Kaggle session (max 9hrs)
-```
+- what changed;
+- what evidence supports it;
+- what remains unknown;
+- what will consume external quota or publish externally;
+- exactly what the owner should check before starting a costly run.
 
-Kaggle sessions save checkpoints to `/kaggle/working/` and training resumes across sessions until the full dataset is covered.
+Never infer success from a falling loss curve. Never move the held-out test set
+to improve a result. Never call synthetic/public-data results production impact.
 
-Full context on why this works without quality loss is in `build_approach_cost.md`.
+## Current state
 
----
+| Stage | State |
+|---|---|
+| Foundry v3 build | Complete locally; 20,606 rows; strict validator passes |
+| Distillation | Stopped; original 3,355 checkpoint preserved; 2,462 accepted |
+| Training code | Repaired; quality and actual-token EOS preflights added |
+| Evaluation | 276 fixed cases; zero prompt/record/citation overlap verified |
+| Local automated tests | Passing |
+| Hugging Face v3 publication | Pending |
+| Fresh Kaggle v3 training | Pending; do not use v1/v2 adapters |
+| Base-versus-tuned evaluation | Pending; required before publication claims |
+| Final model publication | Pending evaluation gates |
 
-## The Learning Approach — Non-Negotiable
+## What Project 04 receives
 
-**The owner of this project is learning to master fine-tuning, not just complete the project.**
-
-Any agent or collaborator working in this context must follow this approach exactly:
-
-### 1. One concept or one function at a time
-Do not write entire files. Do not write multiple functions in a single response. The pattern is:
-- Explain the concept (why it exists, what problem it solves)
-- Explain the design decision (why this specific choice was made)
-- Show or guide the code for that single piece
-- **Wait for confirmation before moving to the next piece**
-
-### 2. Concepts before code — always
-The project plan is explicit: *"Project 3 requires you to understand three concepts before writing a line of training code. Getting them wrong wastes GPU hours."*
-
-The three mandatory concepts are:
-- **LoRA** — Low-Rank Adaptation: what rank means, why it preserves base model knowledge
-- **QLoRA** — 4-bit quantization: how it reduces VRAM, why quality is not affected
-- **Catastrophic Forgetting** — what causes it, why low learning rate + warmup prevents it
-
-No training code is written until these are understood and documented in the owner's own words.
-
-### 3. The owner writes the code
-An agent's job is to guide and explain — not to produce finished code for the owner to paste. If the owner is stuck, give a hint or explain the concept differently. Do not solve it for them unless explicitly asked and the specific piece is purely mechanical (imports, boilerplate).
-
-### 4. Answers must be defensible
-Every hyperparameter in `train/config.py` must be something the owner can explain from memory to a hiring manager. If they cannot explain why `lora_r=16` or why `learning_rate=2e-4`, we have not done the teaching step yet.
-
-### 5. No full file dumps
-Even if asked "can you write the whole file," the correct response is to write one function, explain it, and wait. The exception is when the owner explicitly says "I understand all of this, just generate the boilerplate" for a non-conceptual piece (e.g., `__init__.py`).
-
----
-
-## Project Structure Being Built
-
-```
-ios-risk-intelligence-core/
-│
-├── train/
-│   ├── __init__.py
-│   ├── config.py          ← all hyperparameters in one dataclass
-│   ├── dataset.py         ← loads from HuggingFace, formats, splits
-│   ├── model.py           ← model loading + LoRA adapter attachment
-│   ├── trainer.py         ← training loop with W&B logging
-│   └── run_training.py    ← entry point
-│
-├── eval/
-│   ├── __init__.py
-│   ├── domain_eval.py     ← 50 held-out domain prompts eval suite
-│   ├── compare_gpt4.py    ← side-by-side vs GPT-4 on 50 prompts
-│   └── benchmark_results.py
-│
-├── inference/
-│   ├── __init__.py
-│   └── predictor.py       ← clean inference API (used by Projects 4 & 5)
-│
-├── notebooks/
-│   ├── 01_dataset_inspection.ipynb
-│   ├── 02_training_run.ipynb    ← the Kaggle notebook
-│   └── 03_eval_results.ipynb
-│
-├── configs/
-│   └── training_config.yaml
-│
-├── tests/
-│   ├── test_dataset.py
-│   └── test_inference.py
-│
-├── requirements.txt
-└── README.md
-```
-
----
-
-## Current Progress
-
-| Stage | Status | Notes |
-|---|---|---|
-| Conceptual foundation (LoRA, QLoRA, forgetting) | ✅ Complete | Day 1 — all three concepts understood and explained in own words |
-| Repo skeleton + config | ✅ Complete | train/ (config, dataset, model, trainer, run_training), tests, configs/yaml |
-| Smoke test (2000 samples on Kaggle) | Not started | |
-| Full training run (20k samples/session) | Not started | |
-| Eval harness + domain eval | Not started | |
-| HuggingFace push | Not started | |
-
-**Update this table as stages complete.**
-
----
-
-## Key References
-
-- **Project plan:** `IOS_Risk_Project03_DomainIntelligenceCore.docx` (in this directory)
-- **Compute strategy:** `build_approach_cost.md` (in this directory)
-- **Dataset:** `Etherlabs/ios-risk-finetune-v1` on HuggingFace
-- **LoRA paper:** arxiv.org/abs/2106.09685 — read abstract + Section 3
-- **QLoRA paper:** arxiv.org/abs/2305.14314 — read abstract + Section 2
-- **Karpathy attention walkthrough:** youtube.com/@AndrejKarpathy — "Let's build GPT from scratch", ~1hr mark
-
----
-
-## What Hands Off to Project 04
-
-Project 04 (Verification System) imports directly from `inference/predictor.py`. The fine-tuned model must be on HuggingFace and the `IOSRiskPredictor` class must be clean and importable before Project 04 can begin.
-
----
-
-*This file is the source of truth for any agent, IDE, or collaborator entering this project mid-stream. Read it before doing anything else.*
+Project 04 imports `IOSRiskPredictor` from `inference/predictor.py`. That handoff
+is ready only after the adapter is published and the frozen evaluation result is
+recorded. The predictor uses deterministic decoding and instructs the model not
+to invent missing evidence or numerical probabilities.

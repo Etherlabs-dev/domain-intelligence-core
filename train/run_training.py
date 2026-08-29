@@ -2,13 +2,16 @@
 IOS Risk Intelligence Core — Training CLI Entry Point
 Execute via: python -m train.run_training [--smoke-test]
 """
+
 import argparse
 from train.config import TrainingConfig
 from train.trainer import run_training_pipeline
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="IOS Risk Brain #1 Fine-Tuning Pipeline")
+    parser = argparse.ArgumentParser(
+        description="IOS Risk Brain #1 Fine-Tuning Pipeline"
+    )
 
     parser.add_argument(
         "--smoke-test",

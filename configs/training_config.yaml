@@ -9,7 +9,7 @@ model:
 lora:
   r: 16
   alpha: 16
-  dropout: 0.05
+  dropout: 0.0
   bias: "none"
   target_modules:
     - "q_proj"
@@ -22,8 +22,8 @@ lora:
 
 # Dataset
 dataset:
-  name: "Etherlabs/ios-risk-finetune-v1"
-  val_split: 0.05
+  name: "Etherlabs/ios-risk-finetune-v3"
+  val_size: 1000
   max_samples: null
 
 # Optimization (T4 GPU optimized)
@@ -39,11 +39,12 @@ training:
 
 # Checkpointing & Logging
 logging:
-  output_dir: "./outputs/ios-risk-llama3-v1"
+  output_dir: "./outputs/Llama-3.1-8B-IOS-Risk-v1"
   save_strategy: "steps"
-  save_steps: 200
+  save_steps: 250
+  eval_steps: 250
   save_total_limit: 3
   logging_steps: 10
   report_to: "wandb"
   wandb_project: "ios-risk-domain-core"
-  wandb_run_name: "llama3-8b-qlora-v1"
+  wandb_run_name: "llama3-8b-ios-risk-v1"

@@ -2,7 +2,7 @@
 IOS Risk Intelligence Core — Model Loading & LoRA Adapter Setup
 Uses Unsloth FastLanguageModel for memory-efficient 4-bit fine-tuning.
 """
-from typing import Tuple
+
 from train.config import TrainingConfig
 
 
@@ -33,7 +33,9 @@ def load_model_and_tokenizer(config: TrainingConfig):
     if resuming:
         print(f"[Model] RESUMING from trained adapter '{source}' in 4-bit...")
     else:
-        print(f"[Model] Loading base model '{source}' in 4-bit (max_seq_length={config.max_seq_length})...")
+        print(
+            f"[Model] Loading base model '{source}' in 4-bit (max_seq_length={config.max_seq_length})..."
+        )
 
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=source,
@@ -45,7 +47,9 @@ def load_model_and_tokenizer(config: TrainingConfig):
         print("[Model] Trained adapter restored — skipping fresh LoRA attachment.")
         FastLanguageModel.for_training(model)
     else:
-        print(f"[Model] Attaching LoRA adapters (rank={config.lora_r}, alpha={config.lora_alpha})...")
+        print(
+            f"[Model] Attaching LoRA adapters (rank={config.lora_r}, alpha={config.lora_alpha})..."
+        )
         model = FastLanguageModel.get_peft_model(
             model,
             r=config.lora_r,
@@ -59,6 +63,8 @@ def load_model_and_tokenizer(config: TrainingConfig):
 
     trainable_params, all_params = model.get_nb_trainable_parameters()
     trainable_pct = 100 * trainable_params / all_params
-    print(f"[Model] Parameter Summary: {trainable_params:,} trainable / {all_params:,} total ({trainable_pct:.3f}% trainable)")
+    print(
+        f"[Model] Parameter Summary: {trainable_params:,} trainable / {all_params:,} total ({trainable_pct:.3f}% trainable)"
+    )
 
     return model, tokenizer

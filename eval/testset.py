@@ -1,159 +1,208 @@
-"""
-IOS Risk — Held-Out Evaluation Set
-==================================
-Builds the fixed evaluation set used by eval/domain_eval.py.
-
-The set has two halves, because the model is trained on two tasks:
-
-  1. RISK ASSESSMENT — scenario prompts expecting a risk tier
-     (LOW / HIGH / CRITICAL) plus reasoning and a recommended action.
-     This is what Project 03's success criteria measure.
-
-  2. CLASSIFICATION — tabular prompts expecting the single token
-     FRAUD or LEGITIMATE. This is the head-to-head against the
-     XGBoost baseline from Project 01's eval harness.
-
-HELD OUT MEANS HELD OUT
-  Scenario prompts are generated with EVAL_SEED, which differs from the
-  training seed, so no prompt here was produced during dataset build.
-  Tabular prompts are drawn from a disjoint slice of the v1 dataset.
-"""
+"""Build the fixed, leakage-controlled Project 03 v3 evaluation set."""
 
 from __future__ import annotations
 
+import argparse
+import hashlib
 import json
 import random
 from pathlib import Path
 from typing import Any
 
-# Different from the build seed (42). Same generator, different draws.
-EVAL_SEED = 20260824
-
-N_SCENARIO_FRAUD = 24  # 6 per fraud type
-N_SCENARIO_LEGIT = 26
-N_TABULAR = 200  # balanced 50/50 so recall is measurable
-
-TIER_OF_FRAUD_TYPE = {
-    "card_testing": "HIGH",
-    "account_takeover": "CRITICAL",
-    "money_mule": "HIGH",
-    "bust_out": "CRITICAL",
-}
-
 RISK_INSTRUCTION = (
-    "You are IOS Risk, an AI system for financial risk assessment. "
-    "Analyse the following transaction and assess its fraud risk."
-)
-CLASSIFY_INSTRUCTION = (
-    "Classify this financial transaction as FRAUD or LEGITIMATE based on the features provided."
+    "You are IOS Risk, a financial risk intelligence system. Analyse only the supplied "
+    "facts, assign a risk tier, identify the pattern, and recommend an action."
 )
 
 
-def _scenario_cases(foundry_path: Path) -> list[dict[str, Any]]:
-    """Generate held-out scenario prompts using the foundry's own factory."""
-    import sys
-
-    sys.path.insert(0, str(foundry_path))
-    from foundry.sources.synthetic_generator import (  # noqa: E402
-        FraudScenarioFactory,
-        format_feature_line,
-    )
-
-    factory = FraudScenarioFactory(seed=EVAL_SEED)
-    generators = {
-        "card_testing": factory.generate_card_testing,
-        "account_takeover": factory.generate_account_takeover,
-        "money_mule": factory.generate_money_mule,
-        "bust_out": factory.generate_bust_out,
+def _case(
+    text: str, tier: str, pattern: str, evidence: list[str], action: str
+) -> dict[str, Any]:
+    return {
+        "task": "risk_assessment",
+        "instruction": RISK_INSTRUCTION,
+        "input": text,
+        "expected_tier": tier,
+        "expected_pattern": pattern,
+        "expected_evidence": evidence,
+        "expected_action": action,
     }
 
+
+def authored_risk_cases() -> list[dict[str, Any]]:
+    """Fifty counterfactual cases authored independently of the training generators."""
     cases: list[dict[str, Any]] = []
-    per_type = N_SCENARIO_FRAUD // len(generators)
-    for fraud_type, gen in generators.items():
-        for _ in range(per_type):
-            rec = gen()
-            cases.append({
-                "task": "risk_assessment",
-                "instruction": RISK_INSTRUCTION,
-                "input": format_feature_line(
-                    amount=rec["Amount"],
-                    hour=int(rec["Time"]) // 3600 % 24,
-                    txn_count=rec["txn_count_1h"],
+    for i in range(5):
+        cases.extend(
+            [
+                _case(
+                    f"Amount: ${0.41 + i * 0.17:.2f} | Hour: {i + 1} | TxnCount1h: {17 + i} | "
+                    "MicroTxn: 1 | OffHours: 1 | LargeTxn: 0 | RoundAmt: 0",
+                    "HIGH",
+                    "card_testing",
+                    ["micro", "velocity"],
+                    "restrict",
                 ),
-                "expected_tier": TIER_OF_FRAUD_TYPE[fraud_type],
-                "expected_pattern": fraud_type,
-            })
-
-    rng = random.Random(EVAL_SEED)
-    for _ in range(N_SCENARIO_LEGIT):
-        amount = round(rng.lognormvariate(3.5, 1.2), 2)
-        hour = rng.randint(0, 22)
-        txn_count = rng.randint(1, 4)
-        cases.append({
-            "task": "risk_assessment",
-            "instruction": RISK_INSTRUCTION,
-            "input": format_feature_line(amount=amount, hour=hour, txn_count=txn_count),
-            "expected_tier": "LOW",
-            "expected_pattern": "legitimate",
-        })
-
-    rng.shuffle(cases)
+                _case(
+                    f"Amount: ${0.49 + i * 0.10:.2f} | Hour: 14 | TxnCount1h: 1 | MicroTxn: 1 | "
+                    "OffHours: 0 | Merchant: verified transit authority | Recurring: 1",
+                    "LOW",
+                    "legitimate",
+                    ["recurring", "verified"],
+                    "no_action",
+                ),
+                _case(
+                    f"Amount: ${820 + i * 113:.2f} | Hour: 2 | TxnCount1h: 2 | NewDevice: 1 | "
+                    "NewCountry: 1 | FailedAuth24h: 4 | CustomerVerified: 0",
+                    "CRITICAL",
+                    "account_takeover",
+                    ["new device", "failed"],
+                    "restrict",
+                ),
+                _case(
+                    f"Amount: ${910 + i * 97:.2f} | Hour: 2 | TxnCount1h: 1 | NewDevice: 0 | "
+                    "NewCountry: 0 | CustomerVerified: 1 | Merchant: hotel | TravelNotice: 1",
+                    "LOW",
+                    "legitimate",
+                    ["verified", "travel"],
+                    "no_action",
+                ),
+                _case(
+                    f"Amount: ${730 + i * 55:.2f} | TxnCount1h: {14 + i} | AccountHistoryMonths: 24 | "
+                    "PriorPaymentPattern: on_time | CreditUtilizationBeforePct: 9 | "
+                    "CreditUtilizationAfterPct: 99 | UtilizationWindowHours: 18",
+                    "CRITICAL",
+                    "bust_out",
+                    ["utilization", "payment"],
+                    "restrict",
+                ),
+                _case(
+                    f"Amount: ${730 + i * 55:.2f} | TxnCount1h: 1 | AccountHistoryMonths: 24 | "
+                    "CreditUtilizationBeforePct: 9 | CreditUtilizationAfterPct: 14 | CustomerVerified: 1",
+                    "LOW",
+                    "legitimate",
+                    ["verified", "utilization"],
+                    "no_action",
+                ),
+                _case(
+                    f"CashDeposits: {4 + i} | DepositWindowDays: 4 | SmallestDeposit: $8,450 | "
+                    f"LargestDeposit: $9,650 | TotalCashDeposited: ${38200 + i * 900:,} | "
+                    "DistinctBranches: 4 | DocumentedSource: none",
+                    "HIGH",
+                    "structuring",
+                    ["below", "branch"],
+                    "escalate",
+                ),
+                _case(
+                    f"CashDeposits: {4 + i} | DepositWindowDays: 30 | TotalCashDeposited: "
+                    f"${38200 + i * 900:,} | BusinessType: registered grocery | DistinctBranches: 1 | "
+                    "DepositPatternVsPrior12m: consistent | DocumentedSource: sales receipts",
+                    "LOW",
+                    "legitimate",
+                    ["documented", "consistent"],
+                    "no_action",
+                ),
+                _case(
+                    f"InboundAmount: ${81000 + i * 6000:,} | OutboundTransfers: {4 + i} | "
+                    "DistinctBeneficiaryAccounts: 4 | TimeToFullyDisburseHours: 9 | "
+                    "ResidualBalance: $120 | DocumentedPurpose: none",
+                    "CRITICAL",
+                    "layering",
+                    ["rapid", "beneficiar"],
+                    "escalate",
+                ),
+                _case(
+                    f"InboundAmount: ${81000 + i * 6000:,} | OutboundTransfers: 1 | "
+                    "Beneficiary: verified mortgage lender | TimeToFullyDisburseHours: 9 | "
+                    "Source: documented title escrow | DocumentedPurpose: property closing",
+                    "LOW",
+                    "legitimate",
+                    ["documented", "verified"],
+                    "no_action",
+                ),
+            ]
+        )
     return cases
 
 
-def _tabular_cases() -> list[dict[str, Any]]:
-    """
-    Draw balanced tabular prompts from the tail of v1.
-
-    Training used a random resample of the whole of v1, so perfect disjointness
-    cannot be guaranteed without the exact build RNG. The tail is used because
-    it is the least likely region to have been sampled heavily, and the result
-    is reported as an approximate held-out estimate rather than a clean one.
-    """
-    from datasets import load_dataset
-
-    ds = load_dataset("Etherlabs/ios-risk-finetune-v1", split="train")
-    total = len(ds)
-    tail = ds.select(range(total - 60_000, total))
-
-    fraud, legit = [], []
-    for row in tail:
-        (fraud if row["output"] == "FRAUD" else legit).append(row)
-
-    rng = random.Random(EVAL_SEED)
-    half = N_TABULAR // 2
-    picked = rng.sample(fraud, min(half, len(fraud))) + rng.sample(legit, half)
-    rng.shuffle(picked)
-
-    return [{
-        "task": "classification",
-        "instruction": CLASSIFY_INSTRUCTION,
-        "input": r["input"],
-        "expected_label": r["output"],
-    } for r in picked]
+def _read_jsonl(path: Path) -> list[dict[str, Any]]:
+    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
 
 
-def build(foundry_path: str, out_path: str = "eval/testset.json") -> dict[str, Any]:
-    cases = _scenario_cases(Path(foundry_path)) + _tabular_cases()
+def _sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def build(
+    tabular_holdout: str,
+    regulatory_holdout: str,
+    out_path: str = "eval/testset.json",
+    seed: int = 20260829,
+) -> dict[str, Any]:
+    tabular_path, regulatory_path = Path(tabular_holdout), Path(regulatory_holdout)
+    tabular = _read_jsonl(tabular_path)
+    fraud = [row for row in tabular if row["output"] == "FRAUD"]
+    legitimate = [row for row in tabular if row["output"] == "LEGITIMATE"]
+    rng = random.Random(seed)
+    selected = rng.sample(fraud, 100) + rng.sample(legitimate, 100)
+    rng.shuffle(selected)
+    classification = [
+        {
+            "task": "classification",
+            "instruction": row["instruction"],
+            "input": row["input"],
+            "expected_label": row["output"],
+            "source_record_id": row["source_record_id"],
+        }
+        for row in selected
+    ]
+
+    one_per_citation: dict[str, dict] = {}
+    for row in _read_jsonl(regulatory_path):
+        one_per_citation.setdefault(row["citation"], row)
+    regulatory = [
+        {
+            "task": "regulatory_recall",
+            "instruction": row["instruction"],
+            "input": row["input"],
+            "expected_citation": row["citation"],
+        }
+        for row in one_per_citation.values()
+    ]
+
+    risk = authored_risk_cases()
     payload = {
-        "eval_seed": EVAL_SEED,
-        "n_risk_assessment": sum(1 for c in cases if c["task"] == "risk_assessment"),
-        "n_classification": sum(1 for c in cases if c["task"] == "classification"),
-        "cases": cases,
+        "schema_version": 2,
+        "seed": seed,
+        "sources": {
+            "tabular_holdout": {
+                "file": tabular_path.name,
+                "sha256": _sha256(tabular_path),
+            },
+            "regulatory_holdout": {
+                "file": regulatory_path.name,
+                "sha256": _sha256(regulatory_path),
+            },
+            "risk_cases": "independently authored counterfactual fixtures",
+        },
+        "counts": {
+            "risk_assessment": len(risk),
+            "classification": len(classification),
+            "regulatory_recall": len(regulatory),
+        },
+        "cases": risk + classification + regulatory,
     }
-    Path(out_path).parent.mkdir(parents=True, exist_ok=True)
-    Path(out_path).write_text(json.dumps(payload, indent=2))
-    print(f"Wrote {len(cases)} cases to {out_path}")
-    print(f"  risk_assessment: {payload['n_risk_assessment']}")
-    print(f"  classification : {payload['n_classification']}")
+    output = Path(out_path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(payload, indent=2) + "\n")
+    print(f"Wrote {len(payload['cases'])} leakage-controlled cases to {output}")
     return payload
 
 
 if __name__ == "__main__":
-    import argparse
-
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--foundry", required=True, help="path to ios-risk-data-foundry checkout")
-    ap.add_argument("--out", default="eval/testset.json")
-    args = ap.parse_args()
-    build(args.foundry, args.out)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--tabular-holdout", required=True)
+    parser.add_argument("--regulatory-holdout", required=True)
+    parser.add_argument("--out", default="eval/testset.json")
+    args = parser.parse_args()
+    build(args.tabular_holdout, args.regulatory_holdout, args.out)

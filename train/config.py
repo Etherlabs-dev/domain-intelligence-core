@@ -2,6 +2,7 @@
 IOS Risk Intelligence Core — Fine-Tuning Configuration
 Every parameter is a deliberate engineering decision.
 """
+
 from dataclasses import dataclass, field
 from typing import List, Optional
 
@@ -18,7 +19,7 @@ class TrainingConfig:
     # ── LoRA Adapter Configuration ───────────────────────────────────
     lora_r: int = 16
     lora_alpha: int = 16
-    lora_dropout: float = 0.05
+    lora_dropout: float = 0.0
     target_modules: List[str] = field(
         default_factory=lambda: [
             "q_proj",
@@ -33,8 +34,8 @@ class TrainingConfig:
     bias: str = "none"
 
     # ── Dataset ──────────────────────────────────────────────────────
-    dataset_name: str = "Etherlabs/ios-risk-finetune-v2"
-    max_samples: Optional[int] = None   # v2 is 20k — one session covers it all
+    dataset_name: str = "Etherlabs/ios-risk-finetune-v3"
+    max_samples: Optional[int] = None  # v3 is 20,606 rows; one session covers it
     sample_offset: int = 0
     # Sessions walk forward through the dataset: session 1 takes rows
     # [0, 20000), session 2 [20000, 40000), and so on. Without this every
@@ -58,8 +59,13 @@ class TrainingConfig:
     optim: str = "adamw_8bit"
     seed: int = 42
 
+    # Dataset quality gates. These run before trainer construction so a bad
+    # export cannot consume GPU time merely because it is loadable.
+    min_unique_instructions: int = 3
+    min_unique_outputs: int = 100
+
     # ── Checkpointing & Saving ───────────────────────────────────────
-    output_dir: str = "./outputs/ios-risk-llama3-v1"
+    output_dir: str = "./outputs/Llama-3.1-8B-IOS-Risk-v1"
     save_strategy: str = "steps"
     save_steps: int = 250
     eval_steps: int = 250
@@ -71,10 +77,11 @@ class TrainingConfig:
     logging_steps: int = 10
     report_to: str = "wandb"
     wandb_project: str = "ios-risk-domain-core"
-    wandb_run_name: Optional[str] = "llama3-8b-qlora-v1"
+    wandb_run_name: Optional[str] = "llama3-8b-ios-risk-v1"
 
     # ── Helper Method ────────────────────────────────────────────────
     def to_dict(self) -> dict:
         """Converts configuration into a dictionary for logging and saving."""
         import dataclasses
+
         return dataclasses.asdict(self)

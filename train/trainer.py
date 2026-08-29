@@ -2,6 +2,7 @@
 IOS Risk Intelligence Core — SFT Training Pipeline
 Integrates Unsloth, TRL SFTTrainer, and Weights & Biases tracking.
 """
+
 import dataclasses
 import inspect
 import os
@@ -10,7 +11,11 @@ from typing import Optional
 from trl import SFTConfig, SFTTrainer
 
 from train.config import TrainingConfig
-from train.dataset import load_and_prepare_dataset
+from train.dataset import (
+    append_eos_token,
+    load_and_prepare_dataset,
+    verify_tokenized_eos,
+)
 from train.model import load_model_and_tokenizer
 
 
@@ -81,21 +86,26 @@ def create_trainer(
 
     # SFTTrainer renamed `tokenizer` -> `processing_class`.
     params = inspect.signature(SFTTrainer.__init__).parameters
-    tokenizer_kwarg = "processing_class" if "processing_class" in params else "tokenizer"
+    tokenizer_kwarg = (
+        "processing_class" if "processing_class" in params else "tokenizer"
+    )
 
-    return SFTTrainer(
+    trainer = SFTTrainer(
         model=model,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         args=training_args,
         **{tokenizer_kwarg: tokenizer},
     )
+    verify_tokenized_eos(trainer, tokenizer)
+    return trainer
 
 
 def is_bfloat16_supported() -> bool:
     """Checks if the current GPU supports bf16 (Ampere/Ada/Hopper). T4 does not."""
     try:
         import torch
+
         return torch.cuda.is_available() and torch.cuda.is_bf16_supported()
     except Exception:
         return False
@@ -121,6 +131,11 @@ def run_training_pipeline(config: Optional[TrainingConfig] = None):
 
     # 2. Model & Tokenizer
     model, tokenizer = load_model_and_tokenizer(config)
+
+    # Do this explicitly even though recent TRL releases can append EOS. The
+    # subsequent token-level assertion verifies what the installed stack did.
+    train_data = append_eos_token(train_data, tokenizer.eos_token)
+    eval_data = append_eos_token(eval_data, tokenizer.eos_token)
 
     # 3. Trainer
     trainer = create_trainer(

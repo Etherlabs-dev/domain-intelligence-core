@@ -1,42 +1,91 @@
-# IOS Risk Intelligence Core
-## Project 03 — Domain Intelligence Core
+# IOS Risk Domain Intelligence Core
 
-Fine-tuning **Llama 3.1 8B Instruct** on 276,772 domain-specific instruction pairs to create **IOS Risk Brain #1** — a model that understands financial risk, fraud patterns, AML typologies, and regulatory language.
+Project 03 of IntelligenceOS: adapt Llama 3.1 8B Instruct to financial-risk
+classification, evidence-grounded fraud/AML assessment, and BSA regulatory
+recall—then prove what changed against the untouched base model.
 
-### Method
-- **Base Model:** `unsloth/Meta-Llama-3.1-8B-Instruct`
-- **Technique:** QLoRA (4-bit quantization + LoRA adapters)
-- **Dataset:** `Etherlabs/ios-risk-finetune-v1` (276k instruction pairs from Project 02)
-- **Compute:** Kaggle T4x2 free tier
+> **Current status:** code, v3 data, and evaluation assets are locally validated.
+> The final v3 Kaggle training and base-versus-tuned evaluation have not yet run.
+> No model-improvement or production-impact claim is made before those results.
 
-### Project Structure
+## Final experiment design
+
+| Component | Verified configuration |
+|---|---|
+| Base | `unsloth/Meta-Llama-3.1-8B-Instruct` |
+| Data | `Etherlabs/ios-risk-finetune-v3` — 20,606 unique pairs |
+| Method | QLoRA 4-bit, LoRA rank/alpha 16, dropout 0, one epoch |
+| Compute | One Kaggle T4 is used by the current Unsloth notebook |
+| Output | `Etherlabs/Llama-3.1-8B-IOS-Risk-v1` |
+| Evaluation | 276 leakage-controlled cases, run identically on base and tuned models |
+
+The second visible T4 is not counted as training capacity: the notebook stack
+uses one GPU. Changing to distributed training would be a separate experiment,
+not a free speed switch.
+
+## What changed after the failed v1/v2 experiments
+
+- v1 contained one instruction and two labels with 99.1% legitimate examples.
+- v2 added prose, but its evaluation overlapped the training generator and 101
+  of 200 classification evaluation records leaked into training.
+- The claim that missing EOS caused v2's invented scores was not proven. v3 now
+  appends EOS explicitly and checks the actual tokenized trainer input before
+  the first optimizer step.
+- v3 supplies every scenario fact used by its expected explanation and rejects
+  unsupported probabilities, scores, malformed rewrites, and duplicate prompts.
+- Tabular evaluation is held out by source-record hash; regulatory evaluation
+  holds out complete CFR sections; risk cases are independently authored.
+
+## Repository map
+
+```text
+train/       reusable QLoRA pipeline and GPU preflight
+inference/   deterministic predictor for Projects 04 and 05
+eval/        fixed v3 test set and strict multi-task scoring
+notebooks/   self-contained Kaggle training and evaluation notebooks
+configs/     mirrored human-readable training configuration
+tests/       dataset, EOS, inference, and evaluation tests
+scripts/     notebook synchronization and secret-safe notebook scrubbing
 ```
-├── train/          ← Fine-tuning pipeline (config, dataset, model, trainer)
-├── eval/           ← Domain evaluation suite + GPT-4 comparison
-├── inference/      ← Clean inference API (used by Projects 4 & 5)
-├── notebooks/      ← Kaggle training notebooks
-├── configs/        ← Training config YAML
-└── tests/          ← Unit tests
-```
 
-### Quick Start
+## Local verification
+
+Python 3.11 is recommended.
+
 ```bash
-# Local setup (for eval + inference work)
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-
-# Run training (on Kaggle or GPU machine)
-python -m train.run_training
-
-# Run inference
-python -m inference.predictor
+pip install -r requirements-test.txt
+ruff check .
+ruff format --check .
+pytest -q
+python -m json.tool notebooks/02_training_run.ipynb >/dev/null
+python -m json.tool notebooks/03_eval_results.ipynb >/dev/null
 ```
 
-### Output
-- **HuggingFace Model:** `Etherlabs/ios-risk-llama3-v1`
-- **Adapter size:** ~80MB (LoRA only)
-- **Merged model:** ~16GB (full 8B, for standalone deployment)
+## Release sequence
 
-### References
-- [LoRA Paper (Hu et al., 2021)](https://arxiv.org/abs/2106.09685)
-- [QLoRA Paper (Dettmers et al., 2023)](https://arxiv.org/abs/2305.14314)
+1. Publish and re-download `ios-risk-finetune-v3`; verify 20,606 rows and its
+   committed SHA-256 manifest.
+2. In Kaggle, replace the training notebook with the verified local copy and
+   run a fresh version. Do not attach a v1/v2 adapter.
+3. Confirm the log prints the v3 dataset, its diversity gate, fresh base-model
+   load, and tokenized EOS preflight before training begins.
+4. Preserve the adapter notebook output.
+5. Attach that exact output plus `ios-risk-eval-assets-v3` to the evaluation
+   notebook and run both the base and tuned models.
+6. Publish the adapter only if the frozen Project 03 gates pass; otherwise keep
+   the results and diagnose the failed dimension without moving the test set.
+
+## Project 03 gates
+
+- risk-tier accuracy `> 0.70`;
+- average risk-response quality `> 0.60`;
+- unsupported-claim rate `<= 0.05`;
+- classification precision/recall/F1 reported, not hidden behind accuracy;
+- regulatory citation recall reported;
+- tuned results compared with the untouched base model on identical cases.
+
+These are research release gates. They do not authorize automated account
+restriction, SAR filing, or production financial decisions.
+
+See [`PROGRESS.md`](PROGRESS.md) for the complete incident and decision history,
+and [`LEARNING_APPROACH.md`](LEARNING_APPROACH.md) for the plain-language handoff.

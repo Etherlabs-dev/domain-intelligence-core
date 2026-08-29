@@ -435,3 +435,117 @@ Ordered by value, highest first.
   instruction cardinality and label distribution first. Two lines of Python
   would have caught the v1 defect before ~7 GPU-hours.
 - Eval loss across different datasets is not comparable.
+
+---
+
+## Stage 8 — Independent audit and v3 release preparation (2026-08-29)
+
+The imported Claude Code handoff was treated as untrusted. Project briefs,
+both related repositories, local documentation, source code, generated data,
+notebooks, logs, and evaluation fixtures were re-read before further work.
+
+### Corrections to Stage 7
+
+The v2 result above is historical evidence, **not a valid final Project 03
+result**:
+
+- 101 of its 200 classification evaluation examples also appeared in v2
+  training data;
+- the 50 risk prompts came from substantially the same generator and rules as
+  training, so they were too easy and narrow;
+- the original scoring accepted partial prose and did not systematically count
+  unsupported facts;
+- therefore the reported v2 `PASS` and F1 `0.8663` must not be used as the
+  project’s public final performance.
+
+The Stage 7 statement that missing EOS was the confirmed root cause of invented
+scores was also too strong. Recent TRL versions may add EOS automatically. The
+cause was never proven from the actual tokenized trainer input. v3 addresses the
+risk defensively: append EOS explicitly and assert the final token ID before the
+first optimizer step. The data and evaluation defects were fixed separately.
+
+### Preserved source artifacts
+
+- Original distillation checkpoint: 3,355 JSONL records, unchanged.
+- Strict audit output: 2,462 accepted model-assisted AML rewrites.
+- Rejections: 2 duplicate source keys, 4 invented-figure outputs, 827 legacy
+  prompts missing support for their answer, and 60 template fallbacks.
+- The long-running NVIDIA process was stopped only after completed lines were
+  safely on disk; generation is not required to resume for v3.
+
+### Foundry v3
+
+The final local export is deterministic and release-gated:
+
+| Property | Verified value |
+|---|---:|
+| Records | 20,606 |
+| Unique instruction/input pairs | 20,606 |
+| Unique outputs | 10,025 |
+| Distilled AML | 2,462 |
+| Template AML | 3,538 |
+| Grounded fraud/benign scenarios | 5,000 |
+| Official eCFR training pairs | 364 |
+| Tabular training records | 9,242 |
+| SHA-256 | `485f02df11b2e1dd4b1dbe0bb4dd9a68615735bbcf64cc7fbbb08933008ca075` |
+
+Scenario inputs now include every fact their answer relies on—for example CTR
+threshold, burst exposure, account history, device change, and utilization
+change. The validator rejects malformed/empty rows, duplicate prompts,
+manifest drift, and unsupported model-score/probability language.
+
+The regulatory cache exposed another collision: many different “general” CFR
+sections shared the same vague question. Questions now name their controlling
+section. The cached official XML produced 468 unique question pairs across 117
+sections; 26 complete sections (104 phrasings) are held out from training.
+
+### Frozen v3 evaluation
+
+`eval/testset.json` contains 276 cases:
+
+- 50 independently authored counterfactual risk cases;
+- 200 balanced transaction cases selected only from the tabular source-record
+  holdout;
+- 26 regulatory prompts, one for each entirely held-out CFR section.
+
+Verified overlap with v3 training:
+
+```text
+exact prompt overlap: 0
+tabular source-record overlap: 0
+regulatory citation overlap: 0
+```
+
+Scoring now requires the tier at the start of a risk response, exact one-token
+classification, expected pattern/evidence/action, regulatory citation, and an
+unsupported-claim audit. Release targets remain tier accuracy `> 0.70`, average
+quality `> 0.60`, and unsupported-claim rate `<= 0.05`.
+
+### Code and notebook safeguards
+
+- training dataset schema and diversity fail before model construction;
+- one epoch, dropout zero, fixed dependency set, and compliant output name;
+- explicit EOS append and actual-token EOS assertion;
+- deterministic inference wrapper for Projects 04/05;
+- notebooks are valid JSON and synchronized with the Python pipeline;
+- eval notebook requires the exact v3 adapter directory and refuses any v1/v2
+  or ambiguous adapter attachment;
+- secret scrubber edits notebook JSON structurally instead of corrupting quoted
+  cells;
+- CI runs lint, formatting, unit tests, and notebook JSON validation.
+
+### Current completion boundary
+
+Complete locally: Foundry v3, strict evaluation assets, training/inference code,
+notebook preflights, tests, and documentation.
+
+Still external/pending:
+
+1. publish and re-download `Etherlabs/ios-risk-finetune-v3`;
+2. run one fresh v3 Kaggle training version;
+3. run the base-versus-tuned v3 evaluation;
+4. publish `Etherlabs/Llama-3.1-8B-IOS-Risk-v1` only if the frozen gates pass;
+5. document final measured results and limitations.
+
+No new Kaggle run should begin until step 1 is verified and the local notebook
+is copied exactly into the Kaggle draft.
