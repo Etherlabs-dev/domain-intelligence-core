@@ -557,3 +557,39 @@ Still external/pending:
 The publication gate is now verified. The next action is to copy the local
 training notebook exactly into the Kaggle draft and run its preflight before
 starting the paid-in-quota GPU training step.
+
+---
+
+## Stage 9 — Final v3 Kaggle training (started 2026-08-30)
+
+The verified local `notebooks/02_training_run.ipynb` was imported into the
+existing Kaggle training draft. Before starting the optimizer, two additional
+quota-protection defects were found and fixed:
+
+1. Hugging Face login was unconditional even when `HF_TOKEN` was empty. Because
+   the v3 dataset is public, the notebook now uses unauthenticated public access
+   when no token is configured. W&B logging is also optional.
+2. Preflight and `trainer.train()` were in the same cell, leaving no safe review
+   point. They are now separate cells. Step 7 prepares the real trainer and
+   stops after all assertions; only Step 8 starts the multi-hour optimizer run.
+
+The live Kaggle preflight completed successfully with:
+
+```text
+dataset: Etherlabs/ios-risk-finetune-v3
+records loaded: 20,606
+quality gate: 4 instruction families, 10,025 unique outputs
+split: 19,606 train / 1,000 validation
+model source: fresh unsloth/Meta-Llama-3.1-8B-Instruct
+previous adapter: none
+LoRA trainable parameters: 41,943,040 (0.520%)
+EOS token verified on actual trainer input: 128009
+preflight result: PASSED
+```
+
+After that evidence was reviewed, Step 8 was started. Its initial trainer report
+showed one epoch, 1,226 optimizer steps, total batch size 16, and 19,606 training
+examples. At the first observation it had reached step 4/1,226 with an estimate
+of about 3 hours 42 minutes. The run was still in progress when this entry was
+written. No performance claim is available until training completes and the
+frozen base-versus-tuned evaluation runs.
