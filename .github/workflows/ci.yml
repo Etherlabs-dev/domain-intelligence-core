@@ -18,4 +18,4 @@ jobs:
       - run: ruff format --check .
       - run: python -m json.tool notebooks/02_training_run.ipynb >/dev/null
       - run: python -m json.tool notebooks/03_eval_results.ipynb >/dev/null
-      - run: pytest -q
+      - run: python -m pytest -q
