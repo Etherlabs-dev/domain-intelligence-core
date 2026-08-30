@@ -10,9 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def set_source(cell: dict, source: str) -> None:
-    cell["source"] = source.splitlines(keepends=True)
-    if cell["source"] and not cell["source"][-1].endswith("\n"):
-        cell["source"][-1] += "\n"
+    # Notebook JSON convention in this repo leaves the final source line without
+    # a newline. Keeping that stable prevents mechanical notebook churn.
+    cell["source"] = source.rstrip("\n").splitlines(keepends=True)
 
 
 def update_training_notebook() -> None:
@@ -82,11 +82,19 @@ print("[Preflight] fresh v3 run; no previous adapter will be loaded")
 
 train_data, eval_data = load_and_prepare_dataset(config)
 model, tokenizer = load_model_and_tokenizer(config)
-assert tokenizer.eos_token and tokenizer.eos_token_id is not None, "Tokenizer has no EOS token"
+assert tokenizer.eos_token and tokenizer.eos_token_id is not None, (
+    "Tokenizer has no EOS token"
+)
+
 
 def append_eos(example):
     text = example["text"]
-    return {"text": text if text.endswith(tokenizer.eos_token) else text + tokenizer.eos_token}
+    return {
+        "text": text
+        if text.endswith(tokenizer.eos_token)
+        else text + tokenizer.eos_token
+    }
+
 
 train_data = train_data.map(append_eos, desc="Appending EOS to train")
 eval_data = eval_data.map(append_eos, desc="Appending EOS to val")
@@ -116,8 +124,12 @@ sft_kwargs = dict(
     dataset_num_proc=2,
     packing=False,
 )
-sft_kwargs["eval_strategy" if "eval_strategy" in fields else "evaluation_strategy"] = "steps"
-sft_kwargs["max_length" if "max_length" in fields else "max_seq_length"] = config.max_seq_length
+sft_kwargs["eval_strategy" if "eval_strategy" in fields else "evaluation_strategy"] = (
+    "steps"
+)
+sft_kwargs["max_length" if "max_length" in fields else "max_seq_length"] = (
+    config.max_seq_length
+)
 for key in [key for key in sft_kwargs if key not in fields]:
     sft_kwargs.pop(key)
 
@@ -140,14 +152,7 @@ assert sample_ids[-1] == tokenizer.eos_token_id, (
     f"EOS preflight failed: got {sample_ids[-1]}, expected {tokenizer.eos_token_id}"
 )
 print(f"[Preflight] EOS verified on actual trainer input: {tokenizer.eos_token_id}")
-
-print("Starting training run on GPU...")
-train_result = trainer.train()
-
-os.makedirs(config.output_dir, exist_ok=True)
-model.save_pretrained(config.output_dir)
-tokenizer.save_pretrained(config.output_dir)
-print(f"LoRA adapter successfully saved to {config.output_dir}")
+print("[Preflight] PASSED. Review this output before running the next cell.")
 """
     set_source(notebook["cells"][15], launch)
 
@@ -156,7 +161,9 @@ print(f"LoRA adapter successfully saved to {config.output_dir}")
         "Etherlabs/ios-risk-llama3-v2", "Etherlabs/Llama-3.1-8B-IOS-Risk-v1"
     )
     set_source(notebook["cells"][19], publish)
-    path.write_text(json.dumps(notebook, indent=1) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(notebook, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
 
 
 def update_eval_notebook() -> None:
@@ -180,31 +187,115 @@ Use a T4 GPU. The notebook stops immediately if either exact input is absent.
     )
     set_source(
         notebook["cells"][4],
-        """import os
+        """import hashlib
+import json
+import os
 import sys
 
-def find(predicate, label):
+EXPECTED_BUNDLE_VERSION = "2026-08-30.2"
+
+
+def find_all(predicate):
     hits = []
     for root, _dirs, files in os.walk("/kaggle/input"):
         if predicate(root, files):
             hits.append(root)
-    if not hits:
-        raise AssertionError(f"{label} not attached. Searched /kaggle/input")
-    return hits
+    return sorted(hits)
 
-assets = find(lambda _root, files: "testset.json" in files and "domain_eval.py" in files,
-              "v3 eval assets")[0]
+
+asset_hits = find_all(
+    lambda root, files: os.path.basename(root.rstrip("/")) == "ios-risk-eval-assets-v3"
+    and {"testset.json", "domain_eval.py", "bundle_manifest.json"}.issubset(files)
+)
+if len(asset_hits) != 1:
+    raise AssertionError(
+        f"Expected exactly one ios-risk-eval-assets-v3 mount; found {asset_hits}"
+    )
+assets = asset_hits[0]
 sys.path.insert(0, assets)
 print("eval assets :", assets)
 
-adapters = [root for root in find(
-    lambda _root, files: "adapter_config.json" in files, "trained v3 adapter"
-) if "checkpoint" not in root]
-expected = [path for path in adapters if os.path.basename(path.rstrip("/")) == "Llama-3.1-8B-IOS-Risk-v1"]
-if len(expected) != 1:
-    raise AssertionError(f"Expected exactly one v3 adapter; found {adapters}")
-ADAPTER = expected[0]
+from domain_eval import EVAL_BUNDLE_VERSION, validate_testset_file  # noqa: E402
+
+if EVAL_BUNDLE_VERSION != EXPECTED_BUNDLE_VERSION:
+    raise AssertionError(
+        f"Stale eval asset {EVAL_BUNDLE_VERSION}; expected {EXPECTED_BUNDLE_VERSION}. "
+        "Refresh the Kaggle dataset input before running."
+    )
+with open(os.path.join(assets, "bundle_manifest.json")) as handle:
+    bundle_manifest = json.load(handle)
+if bundle_manifest.get("bundle_version") != EXPECTED_BUNDLE_VERSION:
+    raise AssertionError(f"Unexpected bundle manifest: {bundle_manifest}")
+if set(bundle_manifest.get("files", {})) != {"domain_eval.py", "testset.json"}:
+    raise AssertionError(f"Incomplete bundle manifest: {bundle_manifest}")
+for filename, expected_hash in bundle_manifest.get("files", {}).items():
+    file_path = os.path.join(assets, filename)
+    with open(file_path, "rb") as handle:
+        actual_hash = hashlib.sha256(handle.read()).hexdigest()
+    if actual_hash != expected_hash:
+        raise AssertionError(
+            f"Corrupt eval asset {filename}: got {actual_hash}, expected {expected_hash}"
+        )
+TESTSET_PATH = os.path.join(assets, "testset.json")
+testset = validate_testset_file(TESTSET_PATH)
+
+adapters = find_all(
+    lambda root, files: os.path.basename(root.rstrip("/")) == "Llama-3.1-8B-IOS-Risk-v1"
+    and {"adapter_config.json", "adapter_model.safetensors"}.issubset(files)
+    and "checkpoint" not in root
+)
+if len(adapters) != 1:
+    raise AssertionError(f"Expected exactly one final v3 adapter; found {adapters}")
+ADAPTER = adapters[0]
+adapter_weights = os.path.join(ADAPTER, "adapter_model.safetensors")
+if os.path.getsize(adapter_weights) < 10_000_000:
+    raise AssertionError(
+        f"Adapter weights look truncated: {os.path.getsize(adapter_weights)} bytes"
+    )
+with open(os.path.join(ADAPTER, "adapter_config.json")) as handle:
+    adapter_config = json.load(handle)
+base_name = str(adapter_config.get("base_model_name_or_path", "")).lower()
+if "llama-3.1-8b-instruct" not in base_name:
+    raise AssertionError(f"Unexpected adapter base model: {base_name!r}")
 print("adapter     :", ADAPTER)
+print("adapter size:", f"{os.path.getsize(adapter_weights) / 1_000_000:.2f} MB")
+print("[Preflight] All isolated inputs validated before model loading.")
+""",
+    )
+    set_source(
+        notebook["cells"][6],
+        """# Match the exact package set used by the successful v3 training run.
+!pip install -q \\
+    "transformers==5.5.0" \\
+    "datasets==4.3.0" \\
+    "trl==0.24.0" \\
+    "bitsandbytes==0.50.1" \\
+    "xformers==0.0.34" \\
+    "peft==0.19.1" \\
+    "unsloth==2026.8.22" \\
+    "unsloth_zoo==2026.8.16" 2>&1 | tail -12
+
+import importlib.metadata as md
+
+EXPECTED_VERSIONS = {
+    "transformers": "5.5.0",
+    "datasets": "4.3.0",
+    "trl": "0.24.0",
+    "bitsandbytes": "0.50.1",
+    "xformers": "0.0.34",
+    "peft": "0.19.1",
+    "unsloth": "2026.8.22",
+    "unsloth_zoo": "2026.8.16",
+}
+installed = {name: md.version(name) for name in EXPECTED_VERSIONS}
+wrong = {
+    name: {"expected": expected, "installed": installed[name]}
+    for name, expected in EXPECTED_VERSIONS.items()
+    if installed[name] != expected
+}
+if wrong:
+    raise AssertionError(f"Dependency preflight failed: {wrong}")
+print("[Preflight] Dependency versions verified:", installed)
 """,
     )
     set_source(
@@ -216,17 +307,24 @@ from domain_eval import run
 base_summary = run(
     model_id="unsloth/Meta-Llama-3.1-8B-Instruct",
     tag="base",
-    testset_path=os.path.join(assets, "testset.json"),
+    testset_path=TESTSET_PATH,
     out_dir="/kaggle/working/eval_results",
 )
 """,
     )
     verdict = """import json
 
+
 def row(label, base, tuned, target=None, lower_is_better=False):
-    passed = tuned <= target if lower_is_better else tuned > target
-    flag = "" if target is None else ("   PASS" if passed else "   FAIL")
-    print(f"{label:<23} base {base:>7.4f} tuned {tuned:>7.4f} delta {tuned-base:>+7.4f}{flag}")
+    if target is None:
+        flag = ""
+    else:
+        passed = tuned <= target if lower_is_better else tuned > target
+        flag = "   PASS" if passed else "   FAIL"
+    print(
+        f"{label:<23} base {base:>7.4f} tuned {tuned:>7.4f} delta {tuned - base:>+7.4f}{flag}"
+    )
+
 
 base_risk = base_summary["risk_assessment"]
 tuned_risk = tuned_summary["risk_assessment"]
@@ -235,15 +333,22 @@ row("tier accuracy", base_risk["tier_accuracy"], tuned_risk["tier_accuracy"], 0.
 row("average quality", base_risk["avg_quality"], tuned_risk["avg_quality"], 0.60)
 row("evidence rate", base_risk["evidence_rate"], tuned_risk["evidence_rate"])
 row("action accuracy", base_risk["action_accuracy"], tuned_risk["action_accuracy"])
-row("unsupported claims", base_risk["unsupported_claim_rate"],
-    tuned_risk["unsupported_claim_rate"], 0.05, lower_is_better=True)
+row(
+    "unsupported claims",
+    base_risk["unsupported_claim_rate"],
+    tuned_risk["unsupported_claim_rate"],
+    0.05,
+    lower_is_better=True,
+)
 
 base_class = base_summary["classification"]
 tuned_class = tuned_summary["classification"]
 print("\\nCLASSIFICATION (200 held-out source records)")
 for metric in ("precision", "recall", "f1"):
     row(metric, base_class[metric], tuned_class[metric])
-print(f"unparseable — base {base_class['unparseable']}, tuned {tuned_class['unparseable']}")
+print(
+    f"unparseable — base {base_class['unparseable']}, tuned {tuned_class['unparseable']}"
+)
 
 base_reg = base_summary["regulatory_recall"]
 tuned_reg = tuned_summary["regulatory_recall"]
@@ -274,7 +379,9 @@ suspect = [result for result in rows if result["unsupported_claims"]]
 print(f"responses with unsupported claims: {len(suspect)}/{len(rows)}")
 """,
     )
-    path.write_text(json.dumps(notebook, indent=1) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(notebook, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

@@ -4,10 +4,12 @@ Project 03 of IntelligenceOS: adapt Llama 3.1 8B Instruct to financial-risk
 classification, evidence-grounded fraud/AML assessment, and BSA regulatory
 recall—then prove what changed against the untouched base model.
 
-> **Current status:** code and evaluation assets are validated, and the exact v3
-> dataset is publicly verified on Hugging Face. The final v3 Kaggle training and
-> base-versus-tuned evaluation have not yet run. No model-improvement or
-> production-impact claim is made before those results.
+> **Current status:** the exact v3 dataset is publicly verified on Hugging Face,
+> final v3 Kaggle training completed successfully, and the pinned adapter output
+> is preserved. The first v3 evaluation attempt stopped before inference because
+> its Kaggle asset imported a repository-only module. The corrected self-contained
+> asset is published and remotely verified; base-versus-tuned results remain
+> pending. No model-improvement or production-impact claim is made before them.
 
 ## Final experiment design
 
@@ -66,13 +68,14 @@ python -m json.tool notebooks/03_eval_results.ipynb >/dev/null
 
 1. **Complete:** published and re-downloaded `ios-risk-finetune-v3`; verified
    20,606 rows and SHA-256 `485f02df11b2e1dd4b1dbe0bb4dd9a68615735bbcf64cc7fbbb08933008ca075`.
-2. In Kaggle, replace the training notebook with the verified local copy and
-   run a fresh version. Do not attach a v1/v2 adapter.
-3. Confirm the log prints the v3 dataset, its diversity gate, fresh base-model
-   load, and tokenized EOS preflight before training begins.
-4. Preserve the adapter notebook output.
-5. Attach that exact output plus `ios-risk-eval-assets-v3` to the evaluation
-   notebook and run both the base and tuned models.
+2. **Complete:** trained the verified v3 notebook for one epoch (1,226 steps) and
+   preserved pinned Version 7 output at `Llama-3.1-8B-IOS-Risk-v1`.
+3. **Complete:** published and re-downloaded self-contained evaluation bundle
+   `2026-08-30.2`; its manifest and both payload hashes match locally.
+4. Refresh `ios-risk-eval-assets-v3` in the Kaggle evaluation draft, import the
+   corrected local evaluation notebook, and review the fail-fast preflight.
+5. Run both the untouched base model and the exact pinned v3 adapter on the same
+   276 frozen cases.
 6. Publish the adapter only if the frozen Project 03 gates pass; otherwise keep
    the results and diagnose the failed dimension without moving the test set.
 

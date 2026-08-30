@@ -64,10 +64,11 @@ to improve a result. Never call synthetic/public-data results production impact.
 | Distillation | Stopped; original 3,355 checkpoint preserved; 2,462 accepted |
 | Training code | Repaired; quality and actual-token EOS preflights added |
 | Evaluation | 276 fixed cases; zero prompt/record/citation overlap verified |
-| Local automated tests | Passing |
-| Hugging Face v3 publication | Pending |
-| Fresh Kaggle v3 training | Pending; do not use v1/v2 adapters |
-| Base-versus-tuned evaluation | Pending; required before publication claims |
+| Local automated tests | 21 passing, including isolated bundle and simulated Kaggle mount checks |
+| Hugging Face v3 publication | Complete and independently re-downloaded |
+| Fresh Kaggle v3 training | Complete; pinned Version 7 output preserved |
+| Evaluation asset | Corrected self-contained bundle `2026-08-30.2` published and re-downloaded |
+| Base-versus-tuned evaluation | Pending rerun; first v3 attempt stopped before inference |
 | Final model publication | Pending evaluation gates |
 
 ## What Project 04 receives

@@ -560,7 +560,7 @@ starting the paid-in-quota GPU training step.
 
 ---
 
-## Stage 9 — Final v3 Kaggle training (started 2026-08-30)
+## Stage 9 — Final v3 Kaggle training (completed 2026-08-30)
 
 The verified local `notebooks/02_training_run.ipynb` was imported into the
 existing Kaggle training draft. Before starting the optimizer, two additional
@@ -587,9 +587,63 @@ EOS token verified on actual trainer input: 128009
 preflight result: PASSED
 ```
 
-After that evidence was reviewed, Step 8 was started. Its initial trainer report
-showed one epoch, 1,226 optimizer steps, total batch size 16, and 19,606 training
-examples. At the first observation it had reached step 4/1,226 with an estimate
-of about 3 hours 42 minutes. The run was still in progress when this entry was
-written. No performance claim is available until training completes and the
-frozen base-versus-tuned evaluation runs.
+After that evidence was reviewed, Step 8 was started. Its trainer report showed
+one epoch, 1,226 optimizer steps, total batch size 16, and 19,606 training
+examples. Kaggle Version 7, `v3-final-persisted-training`, completed successfully
+in 16,786.9 seconds (about 4 hours 40 minutes) on T4 x2. It persisted the final
+adapter at `Llama-3.1-8B-IOS-Risk-v1`; the top-level
+`adapter_model.safetensors` is about 167.83 MB. Version 7 is pinned so dependent
+notebooks resolve this completed output rather than an old v1/v2 run.
+
+Training completion proves that the optimizer and persistence pipeline worked;
+it does not prove model quality. The frozen base-versus-tuned evaluation remains
+the release gate.
+
+---
+
+## Stage 10 — Evaluation packaging incident and fail-fast repair (2026-08-30)
+
+The first formal v3 evaluation attempt correctly mounted the frozen v3 assets,
+the pinned Version 7 adapter, and a Tesla T4 (`sm_75`). It then failed after
+about 1 minute 39 seconds, before any v3 inference, with:
+
+```text
+ModuleNotFoundError: No module named 'train'
+```
+
+The uploaded `domain_eval.py` imported `ALPACA_PROMPT` from the local repository
+package `train.dataset`, but the Kaggle dataset contained only `domain_eval.py`
+and `testset.json`. The browser log showing `33/50` responses with invented
+scores belonged to an older successful v2 evaluation and is not a v3 result.
+
+The correction is deliberately broader than deleting that import:
+
+- evaluation prompt templates are now self-contained inside `domain_eval.py`;
+- the 276-case schema, task counts, required fields, uniqueness rules, labels,
+  citations, and frozen test-set SHA-256 are validated before model loading;
+- a bundle manifest pins the evaluator and test-set hashes and a bundle version;
+- the notebook accepts only one exact `ios-risk-eval-assets-v3` mount and one
+  exact top-level `Llama-3.1-8B-IOS-Risk-v1` adapter, rejecting checkpoints,
+  stale lookalikes, truncated weights, and an incompatible base model;
+- dependency versions are checked against the successful training environment;
+- each generated response is flushed immediately to JSONL, so a later failure
+  does not discard all expensive inference progress;
+- base-model memory is explicitly released before loading the tuned adapter;
+- the verdict helper no longer compares a metric with `None`, which would have
+  crashed only after the full base and tuned evaluation had finished;
+- notebook synchronization no longer risks merging training back into the
+  preflight cell, and every normal evaluation code cell is compile-checked.
+
+Automated validation now includes 21 tests, static checks, notebook formatting
+and JSON checks, an isolated Python import, a simulated Kaggle input tree with a
+stale lookalike dataset, and byte-for-byte remote verification. Kaggle dataset
+`ethercess/ios-risk-eval-assets-v3` now serves bundle `2026-08-30.2` with:
+
+```text
+domain_eval.py  SHA-256 045a2019d068173dc3a73631d0e3c78938c2caa9e2b5630967548e5685c1d1d4
+testset.json    SHA-256 85edb481b4bbceeb0a1630830882e2f5c05cf5b1a664667678727526462a7fe8
+```
+
+The next external action is a manual refresh of the Kaggle dataset input and a
+manual import/review of the corrected evaluation notebook. No evaluator run was
+started automatically during this repair.
