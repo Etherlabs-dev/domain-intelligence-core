@@ -1,0 +1,163 @@
+{
+  "authorization": "No upload or launch authorized by package creation",
+  "automatic_retry": false,
+  "base_model": "unsloth/meta-llama-3.1-8b-instruct-unsloth-bnb-4bit",
+  "base_revision": "0db785ab56c082e30ae7dea3645d45465fbb5797",
+  "canonical_records_sha256": "01d0cb44a7d1bf91844fdea7b6669d8cbee16ba96deefa44f69703bd22a2f50d",
+  "counts": {
+    "development": {
+      "classification": 80,
+      "regulatory_identification": 10,
+      "risk_assessment": 20
+    },
+    "release_holdout": {
+      "classification": 200,
+      "regulatory_identification": 40,
+      "risk_assessment": 100
+    },
+    "train": {
+      "classification": 800,
+      "regulatory_identification": 160,
+      "risk_assessment": 940
+    }
+  },
+  "dataset": "ethercess/ios-risk-three-capability-rc1-assets",
+  "dependency_pins": {
+    "bitsandbytes": "0.50.1",
+    "datasets": "4.3.0",
+    "peft": "0.19.1",
+    "transformers": "5.5.0",
+    "trl": "0.24.0",
+    "unsloth": "2026.8.22",
+    "unsloth_zoo": "2026.8.16",
+    "xformers": "0.0.34"
+  },
+  "evaluations_per_model": 490,
+  "familiar_section_questions": 40,
+  "files": {
+    "candidate_data.json": "5e3f89628937d4b033eddc08f3f9fbf0422a53c30b3e2675b90d644dd60373de",
+    "classification_source_receipt.json": "6de1cd82440a2f7d22f8f2174bac5d9f68563ccdbc42bd29e3fe1db256876518",
+    "review-regulatory-blind-packet-v1.json": "1d95040009d945463779909513d158fc835c0b70f5a33fcf15502b7a82d7db37",
+    "review-regulatory-blind-packet-v2.json": "99ad0fd626ebca78b79945ebcdd6d0874124881a697c8c71a553af7e02363270",
+    "review-regulatory-blind-proposals-v1.json": "1c57b40d9f34c1e5fccc37d6dfede534cb65c9921243e0a69775e1e6d122b0e5",
+    "review-regulatory-blind-proposals-v2.json": "0ab09de8bbd27f1b0eac36dd662e58ec8c95cebdbf9ad026c3105bb9deb72ce2",
+    "review-risk-blind-packet-v1.json": "dbcac9a1e55985c8177a37e528581a583db924bdcdef8138b25a770473e7ac0e",
+    "review-risk-blind-packet-v2.json": "2d62dacb6fd2faea24fadedaa232719e8f0d79f80a21bb58ccf388c10bc72a03",
+    "review-risk-blind-proposals-v1.json": "7d4efdb0bc6e5c3eedba065b32f307d4bc3ee3d8174cc41fb6faed925a25590d",
+    "review-risk-blind-proposals-v2.json": "2117a24fec67417f2cba0b5acd255dc7020b9c253bc851f1a7a1a5aaecb90a84",
+    "runtime.zip": "8a288794a2de97817a3a2a5f60935008f656699faab6c6c32b60a5974586d1a0",
+    "token_checks.json": "7ed0bccd4061d6e5e841735761f964c42df9443b870f850219d381176485b891"
+  },
+  "historical_completeness_verified": false,
+  "kernel": "ethercess/ios-risk-three-capability-rc1",
+  "qualified_independent_review": false,
+  "recipe": {
+    "batch_size": 2,
+    "expected_trainable_parameters": 41943040,
+    "gates": {
+      "classification": {
+        "f1_min": 0.87,
+        "false_negative_rate_max": 0.1,
+        "minimum_cases": 200,
+        "minimum_per_label": 100,
+        "precision_min": 0.85,
+        "recall_min": 0.9,
+        "validity_min": 0.99
+      },
+      "regulatory_familiar": {
+        "citation_accuracy_min": 0.9,
+        "joint_accuracy_min": 0.85,
+        "materially_false_rule_rate_max": 0.0,
+        "minimum_cases": 40,
+        "minimum_sections": 8,
+        "substantive_accuracy_min": 0.85,
+        "validity_min": 0.98
+      },
+      "regulatory_transfer": {
+        "citation_accuracy_min": 0.8,
+        "joint_accuracy_min": 0.75,
+        "materially_false_rule_rate_max": 0.0,
+        "minimum_cases": 40,
+        "minimum_sections": 8,
+        "substantive_accuracy_min": 0.8,
+        "validity_min": 0.98
+      },
+      "risk": {
+        "action_accuracy_min": 0.9,
+        "contradiction_or_arithmetic_error_rate_max": 0.0,
+        "full_answer_accuracy_min": 0.75,
+        "minimum_cases": 100,
+        "minimum_per_tier": 20,
+        "minimum_required_abstention_cases": 20,
+        "pattern_accuracy_min": 0.8,
+        "per_tier_accuracy_min": 0.7,
+        "required_abstention_accuracy_min": 0.95,
+        "tier_accuracy_strictly_greater_than": 0.7,
+        "unjustified_restriction_rate_max": 0.0,
+        "unsupported_claim_rate_max": 0.0,
+        "validity_min": 0.98
+      }
+    },
+    "gradient_accumulation": 8,
+    "learning_rate": 0.0001,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "lora_rank": 16,
+    "max_context": 2048,
+    "optimizer": "adamw_8bit",
+    "optimizer_steps": 238,
+    "packing": false,
+    "padding": "right",
+    "padding_free": false,
+    "sample_rationale": "200 balanced classification cases expose at least 100 fraud opportunities; one missed fraud changes recall by one percentage point. 100 risk cases give 20 cases per tier; each per-tier error changes accuracy by five points. Each regulatory slice has 40 questions across at least eight sections. Questions sharing a source section or scenario family are correlated; report distinct family/group/section counts and cluster-aware uncertainty, and do not treat paraphrases as independent source draws. These are bounded project acceptance samples, not population safety estimates. Zero observed severe failures does not imply zero deployment risk. Larger naturally distributed validation is needed for production claims. Point thresholds are fixed engineering goals, not thresholds derived from expected candidate performance.",
+    "scheduler": "constant",
+    "seed": 42,
+    "selection": {
+      "automatic_retry": false,
+      "candidates": 1,
+      "development": "diagnostic reporting only; no checkpoint or prompt selection",
+      "failed_candidate": "preserve outputs and analyze cause; new candidate needs new approval and new holdout",
+      "paired_nonregression": [
+        "classification_f1",
+        "risk_full_answer",
+        "regulatory_joint_each_slice"
+      ],
+      "release_holdout": "one paired base/tuned evaluation after adapter is fixed",
+      "selection": "final adapter after the predeclared optimizer steps"
+    },
+    "supervision": "explicit labels: prompt and padding -100; target including EOS supervised",
+    "tokenizer_files": {
+      "tokenizer.json": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "tokenizer_config.json": "4d18eae3017839b17cb3598f589b62ec212652d183582ee0fc33a4f1e8b3da67"
+    },
+    "warmup_steps": 0,
+    "weight_decay": 0.0
+  },
+  "session_seconds": 21600,
+  "source_files": {
+    "eval/__init__.py": "fc3e5fa01222b341ffd7611ae9ccedd721fe4d1896b9707b8242dc2594f14484",
+    "eval/v4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eval/v4/domain_eval.py": "1d25210f431e32640d3b8cc7b075b50a7578231dd90f4ff8b8b85e9a6f214b4c",
+    "inference/__init__.py": "1236cf428e5db5e3a78dd75add313264d140634a96a8acf25502b85cc2168c91",
+    "inference/native_predictor.py": "c5dfdf391a4814eb4a86f6ae4ae4586c68aedd758b0ba04c63581bbcb484d58f",
+    "inference/native_protocol.py": "03466eabe47ef741edb191b5cc8380276ad06369ba1767104975bd0257dec7ac",
+    "inference/numeric_consistency.py": "bf7d8ca817a2ee30841fb586362889be1d9d2d8f0447582c8985b7ad018eb7e8",
+    "train/__init__.py": "e0cffdf931a662db3da7b933506ba0918c18416271283e5f9f829d6bdaba8ea1",
+    "train/alignment_integration/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "train/alignment_integration/contract.py": "66cef89239d53dfb8b63f2e04a85469a5c9e36a335d9e3d3406b60abd17837b9",
+    "train/alignment_pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "train/alignment_pilot/runner.py": "c8b89d44eda6fef2e54aed1c2f20dc2b91a47d2684e845a4cadfa9fc02b3687f",
+    "train/release_candidate/__init__.py": "fdcda7834834ae34e3ca65fc63e69845bdb2a689f55a838c0d19b1394564d9bd",
+    "train/release_candidate/contract.py": "d4bdaaf0ac38d4a25e624ad53bb43b4f8c40ca1a4854520504f87334eee79843",
+    "train/release_candidate/gates.py": "0858fd934619463d6a6cbfb8d719c3529ab4549a873ee1c359a106a83cbb5872",
+    "train/release_candidate/runner.py": "f1bc10e9e7f94a1aee76f61248e2ef78cd02f22374e98711b5aea7c640565880",
+    "train/release_candidate/scoring.py": "bdbd66fc9f46777682573c7d29b29faf5d16d281cab12847629b17f9cf207e6e",
+    "train/release_candidate/training.py": "bd910ad2d7e105eb49a7d3423b8f4c368cf2f8c64f493ebb56d09ff94cb45e09",
+    "train/release_candidate/validate.py": "9f9511b255f440686850347bbd067ce7b1e521e9d7b14389fffa79e6754fb18d",
+    "train/release_candidate/verify_result.py": "bf401a5426b98a2321958c956d2bfcb67cc2e169531be5548de91ca5b657d908"
+  },
+  "torch": "2.10.0",
+  "training_rows": 1900,
+  "version": "three-capability-candidate.1",
+  "worker_seconds": 21000
+}

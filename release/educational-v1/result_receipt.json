@@ -1,0 +1,12 @@
+{
+  "status": "CANDIDATE_GENERATIONS_COMPLETE_REVIEW_REQUIRED",
+  "manifest_sha256": "fd9bbed76768cc2e6bcdc85527d2ab971813af84ea4d7e7e6f80f6e1164de1c6",
+  "evaluations_per_model": 490,
+  "runtime_seconds": 9095.908365775,
+  "adapter_sha256": "0ea705ee3eef93b7a93d6d0647408fdd75be04f4a9359063835151a02b38365b",
+  "adapter_bytes": 167832240,
+  "base_raw_sha256": "999276b4382fe77cccc470bdc7fae099a6554425d75aaf880deabac2c68f7265",
+  "tuned_raw_sha256": "df0b6151878551589f5737ee7be08b2821a39236eff4edc9decda658f4f006cf",
+  "release_qualified": false,
+  "automatic_retry": false
+}

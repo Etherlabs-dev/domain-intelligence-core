@@ -7,7 +7,7 @@ set -uo pipefail
 PATTERNS=(
   "HuggingFace token:hf_[A-Za-z0-9]{34,}"
   "W&B API key:wandb_v1_[A-Za-z0-9_-]{30,}"
-  "OpenAI key:sk-[A-Za-z0-9_-]{20,}"
+  "OpenAI key:(^|[^A-Za-z0-9_-])sk-[A-Za-z0-9_-]{20,}"
   "AWS access key:AKIA[0-9A-Z]{16}"
   "GitHub token:gh[pousr]_[A-Za-z0-9]{30,}"
   "GitHub PAT:github_pat_[A-Za-z0-9_]{30,}"

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "manifest_sha256": "fd9bbed76768cc2e6bcdc85527d2ab971813af84ea4d7e7e6f80f6e1164de1c6",
+  "versions": {
+    "transformers": "5.5.0",
+    "datasets": "4.3.0",
+    "trl": "0.24.0",
+    "bitsandbytes": "0.50.1",
+    "xformers": "0.0.34",
+    "peft": "0.19.1",
+    "unsloth": "2026.8.22",
+    "unsloth_zoo": "2026.8.16"
+  },
+  "gpu": [
+    "Tesla T4",
+    "Tesla T4"
+  ]
+}

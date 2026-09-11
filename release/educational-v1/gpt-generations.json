@@ -1,0 +1,1522 @@
+{
+  "sparkov-aa5dc20a3df844948dc9ba75": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-cff83f9fcf86fb67109e1db8": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-45c09304c2ccc376afa3b9e6": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-9b06b980acc971d42ee0a98a": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-e4e7fdc62c4d36490c93a298": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-e6370e162412a0f0704c363e": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-e3f77e9856db4f0a2329df7c": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-2ddb85e602672698818387c7": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-e6202408466d29906f21fb4c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-78fcc583f4f6b1cd4cc40900": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-54f55b34a394cc274744cf73": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-527fd038a7ed1067a905abd1": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-9a27b01c1ca0a0e382512e19": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-72d4be21cbe12a0044067d6a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-0f34cad17cbc1fcda457ea6b": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-baa470b47243266e0f8b4f75": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-76f22e8463aad77577352c21": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8d2843a12b6a470e70613951": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-ced91a23e0c774b5a3307c1f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-7ad58f904d62bd25bb8d0a9b": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-1d00cb39b7b7e591841e992f": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-d15fec5a47dccf8f6d27e7bc": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-60c09621de464c1cca65c308": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-4650b7315674067538e5dc1c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c0b7e5a36d6e40a4e9eaa4fb": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c63905058bb6bbf0a685a89a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-9005e245c8073bb7913f4030": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-d639ce44b022cbd1cf9f6834": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-da20d9d1e0d93339da005518": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c78274c38758483dd878c7c1": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-022d3ff4151cfafae1b9b40d": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-188e2ea2de8c432eb1942157": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-d22b2d3eb8c3bbf2b85ca070": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-436c0b6b4826def038eb1c59": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-06ed4f1ebb246f1864a4ac21": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-2ddab5fee050b8a3522287dc": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-de27ce75a532a484e15aa57a": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-04e2c323bb03fc6e712388a6": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-c3975d1d0bc373f0cd2fcd90": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8391f8b302f8e3cf078fa23a": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-0b3d0cd2a3bf0c7d59754c4e": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-b64a9a4e9ec0edd03351fd4a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8ed334c7e47d665a85975a5a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-d480b08b90dd0dbb7e28eb4f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f4c3eb6a2569f6dd37d8f0b5": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-dd08faca9147d68eed6b4cc1": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-7072222b9429f62c71270dcf": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-74ed176be9ba7a92921a341d": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-83401d2536c3b86a9d34cedc": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c18f6518fba6d90201772652": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-9a92fc4a50e4f3a32009528b": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-6e4991652efa735d95e592c1": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-72a9e285bd1eea9246e4ae42": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-8d618472d66d09f48830709c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8ee24f5472a75b90676379bb": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-cd833a8d9d902f7909405078": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8d51045516e27ee1017109e0": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-11243bbfd01e0d78a5904cec": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b3986e1091ea77d1c572a391": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-e498c775265f2e0d6a9e348b": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-873916a14f3d0ad9cb5a2846": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-3caf63dbbaa4e639d1d7cfe2": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-2c998130c6f5879fc6a118d4": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-cad8d63f7cf89c3b09bcc98d": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-ee34d2fad541aeb1fc090c94": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-005f437e40effa67347209f4": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b8316304c482a7dd467a5775": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-378692bfdd89250fb5cec49a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b3a4fe7f12a3ba2069f578ad": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-d87d8b7905721b2474ec9be6": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c8d3533efb67a5b5fc6239c4": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-da76536a92d4be2ad812ce2f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-3dd14a121c92d0d3c2f67cfb": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-9bb7b85cdbb3bb93fb969080": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-0cf60e465f0bbbc7da5ab119": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-40f2483c198048fbbad01df6": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-f2167c03262511595dbef984": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-ba5186f6bb8a5a9fa861bcb9": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-a46aa7558cfeabe586eec0fa": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-0e39afd44d244973941ead97": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-e5b06ff15c99f28f3c83d33c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f2d1c412e7e59af646a9e968": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-956ed80dace78126176135c4": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-d75c635f9912cfb7cd7cf3e0": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-6f07df5b61ed2d7aa2c048e6": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-de7601d682c166f0b3c12a5c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8f978cfafc93269695a5ade6": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-6d376de66c4aaa013ddce21c": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-6d977257803f4624333f0f09": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-316e4697fe3829033386e94c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f34c633c772b28f9a97ddc49": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b5df50a25878b957552ee8b6": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-dc52a424504c7ce90470af90": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-727f273a3008f8ecaf5fb5f3": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-48606e44e86810a879a0b2b4": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-602c8ac7c598790633c65c47": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-5a5927ad2b4816737ac3ca4e": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-997de767c2016fdf4423423a": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-92a3b38526b40cb78d2f336e": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c9e21a30b354e2b2058587da": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-90e522de45740b692de0e91f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-a3e5733f6278fdcc32e0bd5a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-82e80dc204eb1fb40d124949": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-a0ddd24df0d5cb8cba8099a3": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-af10b5c38d65005f2c64332a": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-f4aa0249b6cd2d5bf01bd2ad": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-aaa79a593511621865f914cf": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-e976dafcf81eb334654bbde4": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-74fbf835c34efb35748e966b": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-9d08a23843c3f41b2cf07fe9": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-65a3be2107da41e607545f23": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-34869144b452ec73b9eeeceb": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f0d5a0e1bf5630082b2a69cb": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c9bc25d4b5bf63dcf3ae9b71": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-0da8d5a846b9b7625242247f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b791d0d9b05ac0e08672c3a7": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-43f4f358347baf45f1131459": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f2a81e41833654192bd5b913": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-15c82f78a0d55236ceb9cfd6": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f64346ad299065f6d723f7c8": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b933336ec143d114289273e1": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-07ae9d9f382d9ffe4ba570e7": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-110570275b30894c8ba4e56e": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-5ffb96499809aef7ed2b275c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-e292bdb1e0321db82b34d454": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-a7c3604250f939e9575a5e8b": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-7cf981fc45a1c5d06b6cb267": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-ef0b8f412a10506dec8be3ea": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-9d4d7cd8b45cba5d435c60cd": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-c09972cbb00ff2d0ace2f2fa": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c13078c247ff0d0b2464207a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-0281df9bddf6f06782b3a7a9": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-a2a42fd65d2cd6c8701f940b": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-203d09c21b7ef98d83c90e9a": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-38c22232d1ab955db0c9e84a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-6ec375a95d8dd690f617fe0f": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-29073a841a93557d267a537f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-659658934f6a53d1a5b93491": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c65062163445e88a6f131ae9": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b3c9ffedaf8e4920902636fc": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-e9cf453b9b939cd457f297aa": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-b5be6c2843971fe59638aa06": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b09badef2f40dc5832b0fddc": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-16ac8ca6e52583d8b48d8c0f": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-8796c53411d153b1991d504d": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-2c56cbaefac846bee970cae0": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-5aac90a5d810fd068466f8ba": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-1197ea3279c1ed3dbfcef79c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f349475627b176c0fc1dc5e6": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-68b14fec38d20b62788ce5ea": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b4f81d0a1a1aa942fc02ce04": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-a3350065f3d0af291639ac70": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-e678cd42c853f204d987096c": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-6de685a4eb6bf10c6a94e740": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-1091c9dc37bc0e96a2e9e7ec": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-00d480357aa1c649a9b6bfce": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f86321072867a374628a75e2": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-4b6ca8d1521d1cf4bff0cfe9": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-401e4ec8628fe70b93467df6": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-0450f54b8767eba81ce9af8a": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-bb5ff614a429030370ffe39c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-315784b03f9475faf9660bce": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-a4c3259cdfc224124f4b41bf": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-635b584512df28b0f6016185": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-db39e0967ad9cece7417fecc": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-491251f6451c74536c73480f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-afb403e84bd48938d834ac35": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-2fddea92caf7198db475b41c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-dc0aec865196c9ebc57486d0": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-38d88ba7d026fbac322cbab1": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-b466a6f929f97644919f6941": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-4e6981eabad10993e82eb705": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-519ee0b0f2ad80dc5d62883f": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-bac0bd85491054dc1b5a50c3": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-116da5e769d61906764bf532": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f2ace425992b723a09da0f90": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-e05bdc44943dc7ee6deb35c4": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-f94d87a6384120c4779b5c6c": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-67ad7334dfd9b2c2e21433c4": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-7d6d3541a4c1a146393f6634": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-137e992312d077fe2d9fa3f6": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-2b28400500c3c2b9f8ce9659": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-9552dec48146e3da606411a8": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8661e4e0a83395caf2e890af": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-e056edd066e913b776034b33": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-191722d20741e0858aaeac43": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-9ed5f361df4fd51bfb62427d": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-019035123dba9bb5b8a8af3c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c44458bdd5c781d981e750c6": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-047325ee5631a7c6adf31b9c": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-9e38fb143a4e04f4f4b4abba": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-3813d819a67895681ff0e1fd": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-cd406de78201c0f5d8296941": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-04249f0861baf490a470fc1e": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-24f38e6ac90350e014818012": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-d258b6b2ab99e519e966663c": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-9327048faa5488fc898dbfba": {
+    "text": "FRAUD",
+    "finish_reason": "eos"
+  },
+  "sparkov-106627c788f6bab249cd5a04": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-8790bb747a67da91d4800eb9": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "sparkov-c7fedebb022849bb2f031b76": {
+    "text": "LEGITIMATE",
+    "finish_reason": "eos"
+  },
+  "risk-revision-004-00": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"account_takeover\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"EndpointForensicFinding\": \"malware stole the payroll administrator's authenticated session\",\n    \"PayrollFileComparison\": \"employee beneficiaries replaced with attacker-controlled beneficiaries\"\n  },\n  \"rationale\": \"Malware has compromised the payroll administrator's session, and payroll beneficiaries have been replaced with attacker-controlled accounts. This indicates a severe account takeover with imminent risk of unauthorized fund transfers.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-005-00": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"layering\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"CustomsVerification\": \"purported shipments on paid invoices never occurred\",\n    \"ExportLedgerAdmission\": \"controller admits invoices disguise criminal proceeds as export income\"\n  },\n  \"rationale\": \"There is direct admission that invoices are used to disguise criminal proceeds, and customs verification confirms the shipments never occurred. This indicates a severe pattern of layering illicit funds through counterfeit export documentation. Immediate restriction is warranted due to the convergence of fraudulent documentation and explicit criminal intent.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-006-00": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"ControllerRecords\": \"authenticated plan to exhaust business credit and leave lenders unpaid\",\n    \"AssetSaleEvidence\": \"credit-funded inventory sold and proceeds transferred to controller personally\",\n    \"BusinessClosureEvidence\": \"premises abandoned while further credit purchases are being attempted\"\n  },\n  \"rationale\": \"There is direct evidence of a coordinated plan to defraud lenders by exhausting credit, liquidating assets for personal gain, and abandoning the business while seeking further credit. These facts indicate a severe and converging bust-out pattern requiring urgent restriction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-007-00": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"TellerTicketAudit\": \"same delivery deliberately recorded as unrelated smaller deposits with false depositor names\",\n    \"RecordedTellerAdmission\": \"tickets were divided and names falsified to prevent required currency reporting\"\n  },\n  \"rationale\": \"The teller audit and admission confirm deliberate structuring: dividing a large cash delivery into smaller deposits under false names to evade reporting requirements. This is a severe, converging suspicious pattern requiring urgent review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-016-00": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"POSConfigurationAudit\": \"employee intentionally fragments cash receipts and records fragments as card payments\",\n    \"CashDrawerEvidence\": \"physical cash totals confirm the purported card receipts were cash\",\n    \"EmployeePurposeStatement\": \"authenticated instruction says this prevents the currency-reporting total from being reached\"\n  },\n  \"rationale\": \"The employee deliberately fragments cash receipts and misrecords them as card payments to avoid currency-reporting thresholds, as confirmed by physical cash evidence and their own statement. This is a severe structuring pattern requiring urgent restriction and review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-004-01": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"account_takeover\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"EndpointForensicFinding\": \"malware stole the payroll administrator's authenticated session\",\n    \"PayrollFileComparison\": \"employee beneficiaries replaced with attacker-controlled beneficiaries\"\n  },\n  \"rationale\": \"Malware has compromised the payroll administrator's session, and payroll beneficiaries have been replaced with attacker-controlled accounts. The altered payroll batch is awaiting execution, indicating an active account takeover with imminent risk.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-005-01": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"layering\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"CustomsVerification\": \"purported shipments on paid invoices never occurred\",\n    \"ExportLedgerAdmission\": \"controller admits invoices disguise criminal proceeds as export income\"\n  },\n  \"rationale\": \"There is direct admission that invoices are used to disguise criminal proceeds, and customs verification confirms no actual shipments occurred. Additional queued payments using the same counterfeit invoices indicate an ongoing scheme to layer illicit funds.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-006-01": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"ControllerRecords\": \"authenticated plan to exhaust business credit and leave lenders unpaid\",\n    \"AssetSaleEvidence\": \"credit-funded inventory sold and proceeds transferred to controller personally\",\n    \"BusinessClosureEvidence\": \"premises abandoned while further credit purchases are being attempted\"\n  },\n  \"rationale\": \"There is direct evidence of a coordinated plan to exhaust credit, liquidate assets, and abandon the business while continuing to seek further credit. These facts strongly indicate a bust-out scheme requiring urgent restriction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-007-01": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"TellerTicketAudit\": \"same delivery deliberately recorded as unrelated smaller deposits with false depositor names\",\n    \"RecordedTellerAdmission\": \"tickets were divided and names falsified to prevent required currency reporting\"\n  },\n  \"rationale\": \"Deliberate division of a large cash delivery into smaller deposits with falsified names to evade reporting requirements is a clear structuring pattern. Teller admission and audit findings confirm intentional circumvention. This represents a severe and converging suspicious activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-016-01": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"POSConfigurationAudit\": \"employee intentionally fragments cash receipts and records fragments as card payments\",\n    \"CashDrawerEvidence\": \"physical cash totals confirm the purported card receipts were cash\",\n    \"EmployeePurposeStatement\": \"authenticated instruction says this prevents the currency-reporting total from being reached\"\n  },\n  \"rationale\": \"The employee deliberately fragments cash receipts and misrecords them as card payments to avoid currency-reporting thresholds, as confirmed by both audit and physical cash evidence. The authenticated statement further corroborates intent to evade reporting. This converging evidence indicates a severe structuring pattern requiring urgent restriction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-004-02": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"account_takeover\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"EndpointForensicFinding\": \"malware stole the payroll administrator's authenticated session\",\n    \"PayrollFileComparison\": \"employee beneficiaries replaced with attacker-controlled beneficiaries\"\n  },\n  \"rationale\": \"Malware has compromised the payroll administrator's session, and payroll beneficiaries have been replaced with attacker-controlled accounts. This indicates a severe account takeover with imminent risk of unauthorized fund transfers.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-005-02": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"layering\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"CustomsVerification\": \"purported shipments on paid invoices never occurred\",\n    \"ExportLedgerAdmission\": \"controller admits invoices disguise criminal proceeds as export income\"\n  },\n  \"rationale\": \"There is direct admission that invoices are used to disguise criminal proceeds, and customs verification confirms the shipments never occurred. This indicates a severe pattern of layering illicit funds through counterfeit export documentation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-006-02": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"ControllerRecords\": \"authenticated plan to exhaust business credit and leave lenders unpaid\",\n    \"AssetSaleEvidence\": \"credit-funded inventory sold and proceeds transferred to controller personally\",\n    \"BusinessClosureEvidence\": \"premises abandoned while further credit purchases are being attempted\"\n  },\n  \"rationale\": \"There is direct evidence of a coordinated plan to exhaust credit, liquidate assets, and abandon the business while continuing to seek further credit. This converging pattern is characteristic of a bust-out scheme and requires urgent restriction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-007-02": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"TellerTicketAudit\": \"same delivery deliberately recorded as unrelated smaller deposits with false depositor names\",\n    \"RecordedTellerAdmission\": \"tickets were divided and names falsified to prevent required currency reporting\"\n  },\n  \"rationale\": \"The teller admitted to dividing a large cash delivery into smaller deposits with false names to evade currency reporting. This deliberate structuring is corroborated by both the audit and the teller's admission, indicating a severe and converging suspicious pattern.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-016-02": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"POSConfigurationAudit\": \"employee intentionally fragments cash receipts and records fragments as card payments\",\n    \"CashDrawerEvidence\": \"physical cash totals confirm the purported card receipts were cash\",\n    \"EmployeePurposeStatement\": \"authenticated instruction says this prevents the currency-reporting total from being reached\"\n  },\n  \"rationale\": \"The employee deliberately fragments cash receipts and misrecords them as card payments to avoid currency-reporting thresholds, as confirmed by physical cash evidence and their own statement. This is a severe structuring pattern requiring urgent restriction and review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-004-03": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"account_takeover\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"EndpointForensicFinding\": \"malware stole the payroll administrator's authenticated session\",\n    \"PayrollFileComparison\": \"employee beneficiaries replaced with attacker-controlled beneficiaries\"\n  },\n  \"rationale\": \"Malware compromised the payroll administrator's session, and payroll beneficiaries were replaced with attacker-controlled accounts. This indicates a severe account takeover with imminent risk of unauthorized fund transfers.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-005-03": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"layering\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"CustomsVerification\": \"purported shipments on paid invoices never occurred\",\n    \"ExportLedgerAdmission\": \"controller admits invoices disguise criminal proceeds as export income\"\n  },\n  \"rationale\": \"There is direct admission that invoices are used to disguise criminal proceeds, and customs verification confirms the shipments never occurred. Additional queued payments using the same counterfeit invoices indicate an ongoing scheme to layer illicit funds. This constitutes a severe converging pattern requiring urgent restriction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-006-03": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"ControllerRecords\": \"authenticated plan to exhaust business credit and leave lenders unpaid\",\n    \"AssetSaleEvidence\": \"credit-funded inventory sold and proceeds transferred to controller personally\",\n    \"BusinessClosureEvidence\": \"premises abandoned while further credit purchases are being attempted\"\n  },\n  \"rationale\": \"There is direct evidence of a coordinated plan to exhaust credit, liquidate assets, and abandon the business while continuing to seek further credit. These facts strongly indicate a bust-out scheme requiring urgent restriction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-007-03": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"TellerTicketAudit\": \"same delivery deliberately recorded as unrelated smaller deposits with false depositor names\",\n    \"RecordedTellerAdmission\": \"tickets were divided and names falsified to prevent required currency reporting\"\n  },\n  \"rationale\": \"The teller audit and admission confirm deliberate structuring: dividing a large cash delivery into smaller deposits with false names to evade reporting requirements. This is a severe, converging suspicious pattern requiring urgent review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-016-03": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"structuring\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"POSConfigurationAudit\": \"employee intentionally fragments cash receipts and records fragments as card payments\",\n    \"CashDrawerEvidence\": \"physical cash totals confirm the purported card receipts were cash\",\n    \"EmployeePurposeStatement\": \"authenticated instruction says this prevents the currency-reporting total from being reached\"\n  },\n  \"rationale\": \"The employee deliberately fragments cash receipts and misrecords them as card payments to avoid currency-reporting thresholds, as confirmed by physical cash evidence and their own statement. This is a severe structuring pattern requiring urgent restriction and review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-046-00": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"layering\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"AmountUSD\": \"650.00\",\n    \"WalletTrail\": \"funds cross several unrelated wallets and rejoin before withdrawal\"\n  },\n  \"rationale\": \"The transaction involves funds moving through several unrelated wallets and rejoining before withdrawal, which is indicative of layering. This pattern is commonly associated with attempts to obscure the origin of funds.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-001-00": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"card_testing\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"GatewayRequestSequence\": \"same card number submitted with systematically enumerated security codes\",\n    \"AuthorizationOutcomes\": \"security-code mismatches followed by one success\"\n  },\n  \"rationale\": \"The use of systematically enumerated security codes with repeated mismatches followed by a success, and no goods or services requested, is a coherent pattern of card testing. This activity is suspicious and warrants escalation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-002-00": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"structuring\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"CourierCashRecords\": \"several couriers make repeated cash placements just below the supplied reporting threshold\",\n    \"CommonControlEvidence\": \"cash envelopes carry the same company ledger reference\"\n  },\n  \"rationale\": \"Multiple couriers are making repeated cash placements just below the reporting threshold, and the cash envelopes share a company ledger reference, indicating coordinated structuring. The company treasury ledger records daily cash as a single collection before dividing it, supporting the suspicion of deliberate structuring. Although evasion purpose is not established, the pattern is coherent and suspicious.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-003-00": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"SupplierCreditOrders\": \"abrupt large orders on newly expanded trade-credit terms\",\n    \"WarehouseInspection\": \"ordered stock removed and trading premises now empty\"\n  },\n  \"rationale\": \"There is a suspicious pattern of abrupt large credit orders followed by removal of stock and empty premises, with overdue invoices and the buyer unreachable. This aligns with bust-out typologies, though deliberate intent is not fully established.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-046-01": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"layering\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"AmountUSD\": \"650.01\",\n    \"WalletTrail\": \"funds cross several unrelated wallets and rejoin before withdrawal\"\n  },\n  \"rationale\": \"The transaction involves funds moving through several unrelated wallets and rejoining before withdrawal, which is indicative of layering. The amount is moderate, and there is no confirmed victim link or business justification, supporting escalation for further review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-001-01": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"card_testing\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"GatewayRequestSequence\": \"same card number submitted with systematically enumerated security codes\",\n    \"AuthorizationOutcomes\": \"security-code mismatches followed by one success\"\n  },\n  \"rationale\": \"The use of systematically enumerated security codes with repeated mismatches followed by a success, and no goods or services requested, is a strong indicator of card testing activity. This pattern is coherent and suspicious, warranting escalation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-002-01": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"structuring\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"CourierCashRecords\": \"several couriers make repeated cash placements just below the supplied reporting threshold\",\n    \"CommonControlEvidence\": \"cash envelopes carry the same company ledger reference\"\n  },\n  \"rationale\": \"Multiple couriers are making repeated cash placements just below the reporting threshold, and the cash envelopes share a company ledger reference, indicating coordinated structuring. The company treasury ledger consolidates these amounts before distribution, supporting the suspicion of deliberate evasion of reporting requirements. Although evasion purpose is not established, the pattern is coherent and suspicious.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-003-01": {
+    "text": "{\n  \"tier\": \"CRITICAL\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"restrict\",\n  \"evidence\": {\n    \"SupplierCreditOrders\": \"abrupt large orders on newly expanded trade-credit terms\",\n    \"WarehouseInspection\": \"ordered stock removed and trading premises now empty\"\n  },\n  \"rationale\": \"There is a convergence of abrupt large credit orders, removal of stock, and empty premises, with overdue invoices and the buyer unreachable. This strongly indicates a bust-out pattern requiring urgent restriction. No evidence of a legitimate nonpayment plan is present.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-046-02": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"layering\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"AmountUSD\": \"650.02\",\n    \"WalletTrail\": \"funds cross several unrelated wallets and rejoin before withdrawal\"\n  },\n  \"rationale\": \"The transaction involves funds moving through several unrelated wallets and rejoining before withdrawal, which is indicative of layering. This pattern is commonly associated with attempts to obscure the origin of funds.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-001-02": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"card_testing\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"GatewayRequestSequence\": \"same card number submitted with systematically enumerated security codes\",\n    \"AuthorizationOutcomes\": \"security-code mismatches followed by one success\"\n  },\n  \"rationale\": \"The use of systematically enumerated security codes with repeated mismatches followed by a success, and no goods or services requested, is a strong indicator of card testing activity. This pattern is coherent and suspicious, warranting escalation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-002-02": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"structuring\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"CourierCashRecords\": \"several couriers make repeated cash placements just below the supplied reporting threshold\",\n    \"CommonControlEvidence\": \"cash envelopes carry the same company ledger reference\"\n  },\n  \"rationale\": \"Multiple couriers are making repeated cash placements just below the reporting threshold, and the cash envelopes share a company ledger reference, indicating coordinated structuring. The company treasury ledger records daily cash as a single collection before dividing it, further supporting a pattern of structured deposits. Although evasion purpose is not established, the facts suggest a suspicious structuring pattern.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-003-02": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"SupplierCreditOrders\": \"abrupt large orders on newly expanded trade-credit terms\",\n    \"WarehouseInspection\": \"ordered stock removed and trading premises now empty\"\n  },\n  \"rationale\": \"There are abrupt large orders on new credit terms, and the ordered stock has been removed with the premises now empty. These facts suggest a bust-out pattern, where goods are obtained on credit and the business is abandoned.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-046-03": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"layering\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"AmountUSD\": \"650.03\",\n    \"WalletTrail\": \"funds cross several unrelated wallets and rejoin before withdrawal\"\n  },\n  \"rationale\": \"The transaction involves funds moving through several unrelated wallets and rejoining before withdrawal, which is indicative of layering. This pattern is commonly associated with attempts to obscure the origin of funds and warrants escalation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-001-03": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"card_testing\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"GatewayRequestSequence\": \"same card number submitted with systematically enumerated security codes\",\n    \"AuthorizationOutcomes\": \"security-code mismatches followed by one success\"\n  },\n  \"rationale\": \"The use of systematically enumerated security codes with repeated mismatches followed by a success, and no goods or services requested, is a strong indicator of card testing activity. This pattern is coherent and suspicious, warranting escalation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-002-03": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"structuring\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"CourierCashRecords\": \"several couriers make repeated cash placements just below the supplied reporting threshold\",\n    \"CommonControlEvidence\": \"cash envelopes carry the same company ledger reference\"\n  },\n  \"rationale\": \"Multiple couriers are making repeated cash placements just below the reporting threshold, and the cash envelopes share a company ledger reference, indicating coordinated structuring. The company treasury ledger records each day's cash as a single collection before dividing it, further supporting a pattern of structuring. Although evasion purpose is not established, the facts suggest a suspicious pattern requiring escalation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-003-03": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"SupplierCreditOrders\": \"abrupt large orders on newly expanded trade-credit terms\",\n    \"WarehouseInspection\": \"ordered stock removed and trading premises now empty\"\n  },\n  \"rationale\": \"There is a suspicious pattern of abrupt large credit orders followed by removal of stock and an empty trading premises. Overdue invoices and inability to contact the buyer further support a bust-out risk, despite no established deliberate nonpayment plan.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-046-04": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"layering\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"AmountUSD\": \"650.04\",\n    \"WalletTrail\": \"funds cross several unrelated wallets and rejoin before withdrawal\"\n  },\n  \"rationale\": \"The transaction involves funds moving through several unrelated wallets and rejoining before withdrawal, which is indicative of layering. This pattern is commonly associated with attempts to obscure the origin of funds.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-001-04": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"card_testing\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"GatewayRequestSequence\": \"same card number submitted with systematically enumerated security codes\",\n    \"AuthorizationOutcomes\": \"security-code mismatches followed by one success\"\n  },\n  \"rationale\": \"The use of systematically enumerated security codes with repeated mismatches followed by a success, and no goods or services requested, is a strong indicator of card testing activity. This pattern is coherent and suspicious, warranting escalation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-002-04": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"structuring\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"CourierCashRecords\": \"several couriers make repeated cash placements just below the supplied reporting threshold\",\n    \"CommonControlEvidence\": \"cash envelopes carry the same company ledger reference\"\n  },\n  \"rationale\": \"Multiple couriers are making repeated cash placements just below the reporting threshold, and the cash envelopes share a company ledger reference, indicating coordinated structuring. The company treasury ledger records each day's cash as a single collection before dividing it, further supporting a pattern of structured transactions. Although evasion purpose is not established, the facts align with structuring risk.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-003-04": {
+    "text": "{\n  \"tier\": \"HIGH\",\n  \"pattern\": \"bust_out\",\n  \"action\": \"escalate\",\n  \"evidence\": {\n    \"SupplierCreditOrders\": \"abrupt large orders on newly expanded trade-credit terms\",\n    \"WarehouseInspection\": \"ordered stock removed and trading premises now empty\"\n  },\n  \"rationale\": \"There is a suspicious pattern of abrupt large credit orders followed by removal of stock and an empty trading premises. Overdue invoices and inability to contact the buyer further support a bust-out risk, though deliberate intent is not fully established.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-036-00": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MilestoneCertificate\": \"buyer and seller signed completion\",\n    \"EscrowTerms\": \"release due on that certificate\"\n  },\n  \"rationale\": \"The release is supported by a signed completion certificate from both parties and matches the escrow terms. The payee aligns with the named seller, indicating legitimate fulfillment.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-037-00": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"PayrollCorrection\": \"employer verified omitted overtime\",\n    \"EmployeeLedger\": \"credit matches approved correction\"\n  },\n  \"rationale\": \"The transaction is supported by employer-verified payroll correction and a matching ledger entry. The recipient is a verified employee account, indicating legitimate payroll activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-038-00": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MembershipMandate\": \"member opted into annual renewal\",\n    \"RenewalNotice\": \"accepted by member\"\n  },\n  \"rationale\": \"The member has opted into annual renewal and accepted the renewal notice, indicating consent. The payee matches the membership contract, supporting legitimate activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-039-00": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"WarrantyClaim\": \"manufacturer approved defective-item claim\",\n    \"ClaimRecipient\": \"verified original buyer\"\n  },\n  \"rationale\": \"The claim is manufacturer approved and the recipient is the verified original buyer, supporting a legitimate transaction. The credit voucher matches the approved claim, indicating no suspicious activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-036-01": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MilestoneCertificate\": \"buyer and seller signed completion\",\n    \"EscrowTerms\": \"release due on that certificate\"\n  },\n  \"rationale\": \"The release is triggered by a signed completion certificate from both parties, matching the escrow terms. The payee matches the named seller, supporting a legitimate transaction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-037-01": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"PayrollCorrection\": \"employer verified omitted overtime\",\n    \"EmployeeLedger\": \"credit matches approved correction\"\n  },\n  \"rationale\": \"The transaction is supported by employer-verified payroll correction and a matching ledger entry. The recipient is a verified employee account, indicating legitimate payroll activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-038-01": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MembershipMandate\": \"member opted into annual renewal\",\n    \"RenewalNotice\": \"accepted by member\"\n  },\n  \"rationale\": \"The transaction aligns with the member's opted-in annual renewal and accepted renewal notice. The payee matches the membership contract, supporting legitimate activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-039-01": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"WarrantyClaim\": \"manufacturer approved defective-item claim\",\n    \"ClaimRecipient\": \"verified original buyer\"\n  },\n  \"rationale\": \"The credit voucher matches an approved manufacturer claim for a defective item, and the recipient is the verified original buyer. These facts support a legitimate transaction with no suspicious indicators.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-036-02": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MilestoneCertificate\": \"buyer and seller signed completion\",\n    \"EscrowTerms\": \"release due on that certificate\"\n  },\n  \"rationale\": \"The release is supported by both parties signing the completion certificate and the escrow terms specify release upon this event. The payee matches the named seller, indicating a legitimate transaction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-037-02": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"PayrollCorrection\": \"employer verified omitted overtime\",\n    \"PayrollRecipient\": \"verified employee account\"\n  },\n  \"rationale\": \"The transaction is a payroll correction for omitted overtime, verified by the employer and credited to a verified employee account. These facts support legitimate payroll activity with no indication of suspicious behavior.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-038-02": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MembershipMandate\": \"member opted into annual renewal\",\n    \"RenewalNotice\": \"accepted by member\"\n  },\n  \"rationale\": \"The member has opted into annual renewal and accepted the renewal notice, and the payee matches the membership contract. These facts support legitimate activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-039-02": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"WarrantyClaim\": \"manufacturer approved defective-item claim\",\n    \"ClaimRecipient\": \"verified original buyer\"\n  },\n  \"rationale\": \"The credit voucher matches an approved manufacturer claim and the recipient is the verified original buyer, supporting a legitimate transaction with no suspicious indicators.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-036-03": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MilestoneCertificate\": \"buyer and seller signed completion\",\n    \"ReleasePayee\": \"matches named seller\"\n  },\n  \"rationale\": \"The release is supported by a signed completion certificate from both parties and the payee matches the named seller. These facts indicate a legitimate escrow release as per the supplied terms.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-037-03": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"PayrollCorrection\": \"employer verified omitted overtime\",\n    \"PayrollRecipient\": \"verified employee account\"\n  },\n  \"rationale\": \"The transaction is supported by an employer-verified payroll correction and is credited to a verified employee account, indicating legitimate payroll activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-038-03": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MembershipMandate\": \"member opted into annual renewal\",\n    \"RenewalNotice\": \"accepted by member\"\n  },\n  \"rationale\": \"The member has opted into annual renewal and accepted the renewal notice. The payee matches the membership contract, supporting legitimate activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-039-03": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"WarrantyClaim\": \"manufacturer approved defective-item claim\",\n    \"ClaimRecipient\": \"verified original buyer\"\n  },\n  \"rationale\": \"The claim is manufacturer-approved and the recipient is the verified original buyer, supporting a legitimate transaction. No suspicious pattern is indicated by the supplied facts.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-036-04": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MilestoneCertificate\": \"buyer and seller signed completion\",\n    \"EscrowTerms\": \"release due on that certificate\"\n  },\n  \"rationale\": \"The release is supported by both parties signing completion and escrow terms specifying release upon this event. The payee matches the named seller, indicating a legitimate transaction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-037-04": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"PayrollCorrection\": \"employer verified omitted overtime\",\n    \"EmployeeLedger\": \"credit matches approved correction\"\n  },\n  \"rationale\": \"The transaction is supported by an employer-verified payroll correction and the credited amount matches the approved adjustment. The recipient is a verified employee account, indicating legitimate payroll activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-038-04": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"MembershipMandate\": \"member opted into annual renewal\",\n    \"RenewalNotice\": \"accepted by member\"\n  },\n  \"rationale\": \"The member has opted into annual renewal and accepted the renewal notice. The payee matches the membership contract, supporting legitimate activity.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-039-04": {
+    "text": "{\n  \"tier\": \"LOW\",\n  \"pattern\": \"legitimate\",\n  \"action\": \"no_action\",\n  \"evidence\": {\n    \"WarrantyClaim\": \"manufacturer approved defective-item claim\",\n    \"ClaimRecipient\": \"verified original buyer\"\n  },\n  \"rationale\": \"The credit voucher matches an approved manufacturer claim and the recipient is the verified original buyer, supporting a legitimate transaction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-040-00": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"FreightInvoice\": \"currency label differs from purchase agreement\",\n    \"ForwarderClarification\": \"pending\"\n  },\n  \"rationale\": \"There is a discrepancy in the currency label between the freight invoice and the purchase agreement, and clarification from the forwarder is still pending. While shipment evidence has been supplied, the unresolved documentation inconsistency requires further review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-041-00": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"SubscriberComplaint\": \"charge may follow cancellation\",\n    \"CancellationTimestamp\": \"not yet verified\"\n  },\n  \"rationale\": \"The subscriber reports a potential charge after cancellation, but the cancellation timing is unverified and the merchant is still checking. There is insufficient context to determine a clear pattern or intent, so further review is warranted.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-043-00": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"BranchCodeCheck\": \"beneficiary branch code differs from saved instruction\",\n    \"BankConfirmation\": \"pending\"\n  },\n  \"rationale\": \"The beneficiary branch code differs from the saved instruction and bank confirmation is pending, introducing unresolved anomalies. There is insufficient context to determine a specific suspicious pattern or benign intent.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-040-01": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"FreightInvoice\": \"currency label differs from purchase agreement\",\n    \"ShipmentEvidence\": \"shipment receipt supplied\"\n  },\n  \"rationale\": \"There is a discrepancy in the currency label between the freight invoice and the purchase agreement, while shipment evidence has been supplied. Pending clarification from the forwarder, this anomaly requires further verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-041-01": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"SubscriberComplaint\": \"charge may follow cancellation\",\n    \"ServiceRecord\": \"merchant checking cancellation timing\"\n  },\n  \"rationale\": \"The subscriber reports a potential charge after cancellation, and the merchant is still verifying the cancellation timing. There is an unresolved anomaly, but insufficient evidence for a specific suspicious pattern.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-043-01": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"BranchCodeCheck\": \"beneficiary branch code differs from saved instruction\",\n    \"BankConfirmation\": \"pending\"\n  },\n  \"rationale\": \"The beneficiary branch code differs from the saved instruction and bank confirmation is pending, which introduces uncertainty. While the payer confirms the intended beneficiary, the unresolved discrepancies require further verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-040-02": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"FreightInvoice\": \"currency label differs from purchase agreement\",\n    \"ShipmentEvidence\": \"shipment receipt supplied\"\n  },\n  \"rationale\": \"There is a discrepancy in the currency label between the freight invoice and the purchase agreement, while shipment evidence has been supplied. The forwarder's clarification is still pending, so the context is incomplete and requires further verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-041-02": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"SubscriberComplaint\": \"charge may follow cancellation\",\n    \"ServiceRecord\": \"merchant checking cancellation timing\"\n  },\n  \"rationale\": \"The subscriber reports a potential charge after cancellation, and the merchant is still verifying the cancellation timing. There is insufficient context to determine a specific pattern or intent, but the unresolved complaint warrants review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-043-02": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"BranchCodeCheck\": \"beneficiary branch code differs from saved instruction\",\n    \"BankConfirmation\": \"pending\"\n  },\n  \"rationale\": \"The beneficiary branch code differs from the saved instruction and bank confirmation is pending, which introduces uncertainty. While the payer confirms the intended beneficiary, the unresolved branch code discrepancy requires further verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-040-03": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"FreightInvoice\": \"currency label differs from purchase agreement\",\n    \"ShipmentEvidence\": \"shipment receipt supplied\"\n  },\n  \"rationale\": \"There is a discrepancy in the currency label between the freight invoice and the purchase agreement, while shipment evidence has been provided. The pending forwarder clarification introduces unresolved ambiguity. Further review is needed to verify the legitimacy of the transaction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-041-03": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"SubscriberComplaint\": \"charge may follow cancellation\",\n    \"ServiceRecord\": \"merchant checking cancellation timing\"\n  },\n  \"rationale\": \"The subscriber reports a potential charge after cancellation, and the merchant is still verifying the cancellation timing. There is insufficient context to determine a specific pattern or intent, but the unresolved complaint warrants review.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-043-03": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"BranchCodeCheck\": \"beneficiary branch code differs from saved instruction\",\n    \"BankConfirmation\": \"pending\"\n  },\n  \"rationale\": \"The beneficiary branch code differs from the saved instruction and bank confirmation is pending, which introduces uncertainty. While the payer confirms the intended beneficiary, the unresolved discrepancies require further verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-040-04": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"FreightInvoice\": \"currency label differs from purchase agreement\",\n    \"ShipmentEvidence\": \"shipment receipt supplied\"\n  },\n  \"rationale\": \"There is a discrepancy in the currency label between the freight invoice and the purchase agreement, while shipment evidence has been supplied. The forwarder's clarification is still pending, so the context is unresolved and requires further verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-041-04": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"SubscriberComplaint\": \"charge may follow cancellation\",\n    \"ServiceRecord\": \"merchant checking cancellation timing\"\n  },\n  \"rationale\": \"The subscriber reports a potential charge after cancellation, and the merchant is verifying the cancellation timing. There is an unresolved anomaly, but insufficient evidence for a suspicious pattern.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-043-04": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"BranchCodeCheck\": \"beneficiary branch code differs from saved instruction\",\n    \"BankConfirmation\": \"pending\"\n  },\n  \"rationale\": \"The beneficiary branch code differs from the saved instruction and bank confirmation is pending, which introduces uncertainty. While the payer confirms the intended beneficiary, the unresolved branch code discrepancy requires verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-040-05": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"FreightInvoice\": \"currency label differs from purchase agreement\",\n    \"ShipmentEvidence\": \"shipment receipt supplied\"\n  },\n  \"rationale\": \"There is a discrepancy in the currency label between the freight invoice and the purchase agreement, while shipment evidence has been provided. The pending forwarder clarification introduces unresolved ambiguity. Further review is needed to verify the legitimacy of the transaction.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-041-05": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"SubscriberComplaint\": \"charge may follow cancellation\",\n    \"CancellationTimestamp\": \"not yet verified\"\n  },\n  \"rationale\": \"The subscriber reports a potential charge after cancellation, but the cancellation timing is unverified and the merchant is still checking. There is insufficient context to determine a clear pattern or intent. Further review is needed to clarify the situation.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-043-05": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"BranchCodeCheck\": \"beneficiary branch code differs from saved instruction\",\n    \"BankConfirmation\": \"pending\"\n  },\n  \"rationale\": \"The beneficiary branch code differs from the saved instruction and bank confirmation is pending, introducing unresolved anomalies. While the payer confirms the intended beneficiary, the discrepancies require verification before proceeding.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-040-06": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"FreightInvoice\": \"currency label differs from purchase agreement\",\n    \"ShipmentEvidence\": \"shipment receipt supplied\"\n  },\n  \"rationale\": \"There is a discrepancy in the currency label between the freight invoice and the purchase agreement, while shipment evidence has been supplied. The forwarder's clarification is still pending, so the context is incomplete and requires further verification.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-blind-041-06": {
+    "text": "{\n  \"tier\": \"MEDIUM\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"SubscriberComplaint\": \"charge may follow cancellation\",\n    \"CancellationTimestamp\": \"not yet verified\"\n  },\n  \"rationale\": \"The subscriber reports a potential charge after cancellation, but the cancellation timing is unverified and the merchant is still checking. There is insufficient context to determine a clear pattern or intent.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-008-00": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"CompletedPaymentCount\": \"12\",\n    \"DisputedPaymentCount\": \"NaN\"\n  },\n  \"rationale\": \"DisputedPaymentCount is not a valid number, making it impossible to assess the declared relationship or identify a pattern. Insufficient context prevents a clear determination.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-010-00": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"OwnerEvidenceA\": \"verified owner denies a payment in record A\",\n    \"OwnerEvidenceB\": \"verified owner confirms a separate payment in record B\"\n  },\n  \"rationale\": \"There is conflicting owner evidence regarding two separate payments of the same amount, but the event under review is not linked to either record. Without a direct connection, the relevance of the owner statements to this event is unclear. Further review is needed to clarify the context and relationship.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-011-00": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"AmountUSD\": \"96.00\",\n    \"ForeignInvoice\": \"90 EUR\",\n    \"AlertBasis\": \"system claims a value mismatch using an undocumented exchange rate\"\n  },\n  \"rationale\": \"There is a reported mismatch between the USD amount and the EUR invoice, but the exchange rate and fees are not supplied. Without the actual rate or fee details, the cause and significance of the mismatch cannot be determined.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-008-01": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"CompletedPaymentCount\": \"12\",\n    \"DisputedPaymentCount\": \"NaN\"\n  },\n  \"rationale\": \"DisputedPaymentCount is not a valid number, making it impossible to assess the declared relationship or pattern. Insufficient context prevents a clear determination.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-010-01": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"OwnerEvidenceA\": \"verified owner denies a payment in record A\",\n    \"OwnerEvidenceB\": \"verified owner confirms a separate payment in record B\"\n  },\n  \"rationale\": \"There is conflicting owner evidence regarding two separate payments of the same amount, but the event under review is not linked to either record. Without a direct connection, the relevance of the owner statements to this event is unclear. Further review is needed due to insufficient context.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-011-01": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"AmountUSD\": \"96.01\",\n    \"ForeignInvoice\": \"90 EUR\",\n    \"AlertBasis\": \"system claims a value mismatch using an undocumented exchange rate\"\n  },\n  \"rationale\": \"There is a reported mismatch between the USD amount and the foreign invoice, but the exchange rate and fees are not supplied. Without the actual rate or fee details, the cause and significance of the mismatch cannot be determined.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-008-02": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"CompletedPaymentCount\": \"12\",\n    \"DisputedPaymentCount\": \"NaN\"\n  },\n  \"rationale\": \"DisputedPaymentCount is not a valid numeric value, preventing assessment of the declared relationship. Insufficient context exists to determine risk or pattern.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-010-02": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"OwnerEvidenceA\": \"verified owner denies a payment in record A\",\n    \"OwnerEvidenceB\": \"verified owner confirms a separate payment in record B\"\n  },\n  \"rationale\": \"There is conflicting owner evidence regarding two separate payments of the same amount, but the event under review is not linked to either record. Without a direct connection, the context is insufficient to determine risk or pattern.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-011-02": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"AmountUSD\": \"96.02\",\n    \"ForeignInvoice\": \"90 EUR\",\n    \"AlertBasis\": \"system claims a value mismatch using an undocumented exchange rate\"\n  },\n  \"rationale\": \"There is a reported mismatch between the USD amount and the foreign invoice, but the exchange rate and fees are not supplied. Without documentation of the rate or further context, the cause and significance of the mismatch cannot be determined.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-008-03": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"CompletedPaymentCount\": \"12\",\n    \"DisputedPaymentCount\": \"NaN\"\n  },\n  \"rationale\": \"DisputedPaymentCount is not a valid number, making it impossible to assess the declared relationship or identify a pattern. Insufficient context prevents a clear determination.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-010-03": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"OwnerEvidenceA\": \"verified owner denies a payment in record A\",\n    \"OwnerEvidenceB\": \"verified owner confirms a separate payment in record B\"\n  },\n  \"rationale\": \"The owner denies one payment and confirms another, but the event being assessed is not linked to either record. There is insufficient context to determine the relevance of these facts to the current event.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-011-03": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"AmountUSD\": \"96.03\",\n    \"ForeignInvoice\": \"90 EUR\",\n    \"AlertBasis\": \"system claims a value mismatch using an undocumented exchange rate\"\n  },\n  \"rationale\": \"There is a reported mismatch between the USD amount and the foreign invoice, but the exchange rate and fees are not supplied. Without documentation of the rate or further context, the cause and significance of the mismatch cannot be determined.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-008-04": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"CompletedPaymentCount\": \"12\",\n    \"DisputedPaymentCount\": \"NaN\"\n  },\n  \"rationale\": \"DisputedPaymentCount is not a valid number, making it impossible to assess the declared numeric relationship or identify a pattern. Further clarification is required.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-010-04": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"OwnerEvidenceA\": \"verified owner denies a payment in record A\",\n    \"OwnerEvidenceB\": \"verified owner confirms a separate payment in record B\"\n  },\n  \"rationale\": \"There are conflicting owner statements about two separate payments, but the event being assessed is not linked to either record. Without a direct connection, the context is insufficient to determine risk or pattern.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-011-04": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"AmountUSD\": \"96.04\",\n    \"ForeignInvoice\": \"90 EUR\",\n    \"AlertBasis\": \"system claims a value mismatch using an undocumented exchange rate\"\n  },\n  \"rationale\": \"The alert is based on a claimed value mismatch, but the exchange rate and fees are not supplied, making it impossible to verify the discrepancy. Without documentation of the rate or additional context, the significance of the mismatch cannot be determined.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-008-05": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"CompletedPaymentCount\": \"12\",\n    \"DisputedPaymentCount\": \"NaN\"\n  },\n  \"rationale\": \"DisputedPaymentCount is not a valid number, making it impossible to assess the declared relationship or pattern. Insufficient context prevents a clear determination.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-010-05": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"OwnerEvidenceA\": \"verified owner denies a payment in record A\",\n    \"OwnerEvidenceB\": \"verified owner confirms a separate payment in record B\"\n  },\n  \"rationale\": \"The owner denies one payment and confirms another, but the event under review is not linked to either record. There is insufficient context to determine the relevance of these facts to the current event.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-011-05": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"AmountUSD\": \"96.05\",\n    \"ForeignInvoice\": \"90 EUR\",\n    \"AlertBasis\": \"system claims a value mismatch using an undocumented exchange rate\"\n  },\n  \"rationale\": \"There is a reported value mismatch between the USD amount and the foreign invoice, but the exchange rate and fees are not supplied. Without documentation of the rate or further context, the cause and significance of the mismatch cannot be determined.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-008-06": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"CompletedPaymentCount\": \"12\",\n    \"DisputedPaymentCount\": \"NaN\"\n  },\n  \"rationale\": \"DisputedPaymentCount is not a valid numeric value, making it impossible to assess the declared relationship or identify a pattern. Further clarification or data correction is required.\"\n}",
+    "finish_reason": "eos"
+  },
+  "risk-revision-010-06": {
+    "text": "{\n  \"tier\": \"UNDETERMINED\",\n  \"pattern\": \"undetermined\",\n  \"action\": \"review\",\n  \"evidence\": {\n    \"OwnerEvidenceA\": \"verified owner denies a payment in record A\",\n    \"OwnerEvidenceB\": \"verified owner confirms a separate payment in record B\"\n  },\n  \"rationale\": \"The owner denies one payment and confirms another, but the event being assessed is not linked to either record. There is insufficient context to determine the relevance of these facts to the current event.\"\n}",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.210-release_holdout-00": {
+    "text": "31 CFR \u00a7 1024.210\n\nThis provision requires mutual funds to develop and implement a written anti-money laundering (AML) program approved by their board of directors or trustees. The program must, at a minimum, include: (1) internal policies, procedures, and controls; (2) a designated compliance officer; (3) ongoing employee training; and (4) an independent audit function to test the program.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.210-release_holdout-01": {
+    "text": "31 CFR \u00a7 1024.210\n\nThis provision requires mutual funds to develop and implement a written anti-money laundering (AML) program approved by their board of directors or trustees, including minimum program elements such as internal controls, independent testing, designated compliance personnel, and ongoing training.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.210-release_holdout-02": {
+    "text": "31 CFR \u00a7 1024.210\n\nThis section requires mutual funds to develop and implement a written anti-money laundering (AML) program, approved by their board of directors or trustees, that is designed to prevent the fund from being used for money laundering or terrorist financing. The program must, at a minimum, include: (1) internal policies, procedures, and controls; (2) designation of a compliance officer; (3) ongoing employee training; and (4) independent testing for compliance.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.210-release_holdout-03": {
+    "text": "31 CFR \u00a7 1024.210",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.210-release_holdout-04": {
+    "text": "The governing provision requires mutual funds to implement and approve a written anti-money laundering (AML) program, which must be approved by the fund\u2019s board of directors or trustees and include, at a minimum: (1) the development of internal policies, procedures, and controls; (2) designation of a compliance officer; (3) ongoing employee training; and (4) an independent audit function to test the program. Citation: 31 CFR \u00a7 1024.210.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.410-release_holdout-00": {
+    "text": "31 CFR \u00a7 1010.420\n\nThis provision requires mutual funds to retain records of the information used to verify the identity of customers, and it points to the general recordkeeping requirements found in 31 CFR \u00a7 1010.410.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.410-release_holdout-01": {
+    "text": "31 CFR \u00a7 1010.420\n\nThis provision requires mutual funds to retain records of the issuance of shares, referencing the general recordkeeping requirements applicable to financial institutions.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.410-release_holdout-02": {
+    "text": "31 CFR \u00a7 1024.400\n\nThis provision requires mutual funds to comply with the general recordkeeping requirements found in 31 CFR \u00a7 1010.410, thereby incorporating those broader obligations by reference specifically for mutual funds.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.410-release_holdout-03": {
+    "text": "The mutual-fund-specific recordkeeping provision requires mutual funds to comply with the general recordkeeping requirements applicable to banks, including limits such as retaining records of certain transactions for five years. The governing provision is 31 CFR \u00a7 1024.410.",
+    "finish_reason": "eos"
+  },
+  "cfr-1024.410-release_holdout-04": {
+    "text": "The governing provision states that mutual funds must comply with the general recordkeeping requirements applicable to banks under the Bank Secrecy Act. Citation: 31 CFR \u00a7 1024.400.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.210-release_holdout-00": {
+    "text": "31 CFR \u00a7 1026.210\n\nThis provision requires futures commission merchants and introducing brokers in commodities to implement and maintain a written anti-money laundering (AML) program, approved in writing by senior management. The program must, at a minimum, include: (1) policies, procedures, and internal controls; (2) designation of a compliance officer; (3) ongoing employee training; and (4) independent testing for compliance.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.210-release_holdout-01": {
+    "text": "31 CFR \u00a7 1026.210\n\nThis provision requires futures commission merchants and introducing brokers in commodities to develop and implement written anti-money laundering (AML) programs, which must be approved by senior management and include, at a minimum: (1) policies, procedures, and internal controls; (2) designation of a compliance officer; (3) ongoing employee training; and (4) independent testing for compliance.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.210-release_holdout-02": {
+    "text": "31 CFR \u00a7 1026.210\n\nThis section requires futures commission merchants and introducing brokers in commodities to implement and maintain a written anti-money laundering (AML) program, approved by senior management, that includes at minimum: (1) internal policies, procedures, and controls; (2) designation of a compliance officer; (3) ongoing employee training; and (4) independent testing for compliance.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.210-release_holdout-03": {
+    "text": "The controlling provision is 31 CFR \u00a7 1026.210.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.210-release_holdout-04": {
+    "text": "The governing provision requires that each futures commission merchant and introducing broker develop and implement an anti-money laundering program approved in writing by senior management, and specifies minimum elements such as internal policies, designation of a compliance officer, ongoing training, and independent testing. Citation: 31 CFR \u00a7 1026.210.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.320-release_holdout-00": {
+    "text": "31 CFR \u00a7 1026.320\n\nFutures commission merchants and introducing brokers must file a suspicious activity report no later than 30 calendar days after the initial detection of facts that may constitute a basis for filing, or within 60 days if no suspect is identified.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.320-release_holdout-01": {
+    "text": "31 CFR \u00a7 1026.320\n\nThis provision requires futures commission merchants and introducing brokers in commodities to file a suspicious activity report no later than 30 calendar days after the initial detection of facts that may constitute a basis for filing such a report.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.320-release_holdout-02": {
+    "text": "31 CFR \u00a7 1026.320\n\nFutures commission merchants and introducing brokers must file a suspicious activity report no later than 30 calendar days after the initial detection of facts that may constitute a basis for filing; if no suspect is identified, the deadline extends to 60 days.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.320-release_holdout-03": {
+    "text": "Futures commission merchants and introducing brokers must file a suspicious activity report no later than 30 calendar days after the initial detection of facts that may constitute a basis for filing, with an extension to 60 days if no suspect is identified. Governing provision: 31 CFR \u00a7 1026.320.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.320-release_holdout-04": {
+    "text": "The governing provision states that a futures commission merchant or introducing broker must file a suspicious activity report no later than 30 calendar days after the initial detection of facts that may constitute a basis for filing.  \nCitation: 31 CFR \u00a7 1026.320",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.410-release_holdout-00": {
+    "text": "31 CFR \u00a7 1026.410\n\nThis provision requires futures commission merchants and introducing brokers in commodities to comply with the general recordkeeping requirements found in 31 CFR \u00a7 1010.410.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.410-release_holdout-01": {
+    "text": "31 CFR \u00a7 1026.410\n\nThis provision requires futures commission merchants and introducing brokers in commodities to comply with the general recordkeeping requirements set forth in 31 CFR \u00a7 1010.410.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.410-release_holdout-02": {
+    "text": "31 CFR \u00a7 1026.410\n\nThis section requires futures commission merchants and introducing brokers in commodities to maintain records of certain transactions and customer information, referencing the general recordkeeping requirements applicable to these institutions under the Bank Secrecy Act.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.410-release_holdout-03": {
+    "text": "The controlling provision is 31 CFR \u00a7 1026.410.",
+    "finish_reason": "eos"
+  },
+  "cfr-1026.410-release_holdout-04": {
+    "text": "The governing provision states that futures commission merchants and introducing brokers in commodities must comply with the general recordkeeping and retention requirements applicable to financial institutions. Citation: 31 CFR \u00a7 1010.410.",
+    "finish_reason": "eos"
+  },
+  "cfr-1027.100-release_holdout-00": {
+    "text": "31 CFR \u00a7 1027.100\n\nThe covered-goods definition for dealers in jewels, precious metals, and precious stones\u2014including finished goods\u2014is governed by this section, which defines \"covered goods\" as jewels, precious metals, or precious stones, whether in raw or finished form, that are bought or sold in the ordinary course of business.",
+    "finish_reason": "eos"
+  },
+  "cfr-1027.100-release_holdout-01": {
+    "text": "31 CFR \u00a7 1027.100 defines \"covered goods\" for dealers in jewels, precious metals, and precious stones, including finished goods, and requires dealers to apply anti-money laundering program requirements to transactions involving such goods.",
+    "finish_reason": "eos"
+  },
+  "cfr-1027.100-release_holdout-02": {
+    "text": "31 CFR \u00a7 1027.100\n\nThis section defines \"covered goods\" for dealers in jewels, precious metals, and precious stones, including finished goods, as jewels, precious metals, or precious stones that a dealer purchases, sells, or otherwise deals in as part of their business, whether in raw or finished form.",
+    "finish_reason": "eos"
+  },
+  "cfr-1027.100-release_holdout-03": {
+    "text": "The definition of covered goods for dealers in jewels, precious metals, and precious stones, including finished goods and relevant limits, is governed by 31 CFR \u00a7 1027.100.",
+    "finish_reason": "eos"
+  },
+  "cfr-1027.100-release_holdout-04": {
+    "text": "The governing provision defines covered goods for dealers in jewels, precious metals, and precious stones, including finished goods, in 31 CFR \u00a7 1027.100.",
+    "finish_reason": "eos"
+  },
+  "cfr-1028.210-release_holdout-00": {
+    "text": "31 CFR \u00a7 1028.210",
+    "finish_reason": "eos"
+  },
+  "cfr-1028.210-release_holdout-01": {
+    "text": "31 CFR \u00a7 1028.210\n\nThis provision requires credit-card-system operators to implement an anti-money laundering (AML) program that includes approval by senior management and independent testing for compliance.",
+    "finish_reason": "eos"
+  },
+  "cfr-1028.210-release_holdout-02": {
+    "text": "31 CFR \u00a7 1028.210\n\nCredit-card-system operators must implement an anti-money laundering (AML) program that is approved by their board of directors or senior management and includes independent testing for compliance, as required by 31 CFR \u00a7 1028.210.",
+    "finish_reason": "eos"
+  },
+  "cfr-1028.210-release_holdout-03": {
+    "text": "Credit-card-system operators must implement and maintain an anti-money laundering (AML) program that is approved by their board of directors or an equivalent governing body, and the program must be independently audited to test its effectiveness. These requirements are governed by 31 CFR \u00a7 1028.210.",
+    "finish_reason": "eos"
+  },
+  "cfr-1028.210-release_holdout-04": {
+    "text": "The governing provision requires credit-card-system operators to implement an AML program that is approved by their board of directors or an equivalent governing body and to provide for independent testing for compliance. Citation: 31 CFR \u00a7 1028.210.",
+    "finish_reason": "eos"
+  },
+  "cfr-1029.210-release_holdout-00": {
+    "text": "31 CFR \u00a7 1029.210\n\nA covered loan or finance company must ensure its AML program applies to the activities of its agents and brokers, requiring appropriate risk-based procedures for oversight and compliance.",
+    "finish_reason": "eos"
+  },
+  "cfr-1029.210-release_holdout-01": {
+    "text": "31 CFR \u00a7 1029.210",
+    "finish_reason": "eos"
+  },
+  "cfr-1029.210-release_holdout-02": {
+    "text": "31 CFR \u00a7 1029.210\n\nCovered loan or finance companies must develop and implement an anti-money laundering (AML) program that includes risk-based procedures for conducting due diligence on their agents and brokers, ensuring these parties comply with the institution\u2019s AML policies and procedures.",
+    "finish_reason": "eos"
+  },
+  "cfr-1029.210-release_holdout-03": {
+    "text": "A covered loan or finance company must establish and implement an AML program that applies to its agents and brokers, but the program need not duplicate procedures reasonably carried out by those agents or brokers. The governing provision is 31 CFR \u00a7 1029.210.",
+    "finish_reason": "eos"
+  },
+  "cfr-1029.210-release_holdout-04": {
+    "text": "A covered loan or finance company must ensure its AML program applies to the activities of its agents and brokers.  \nCitation: 31 CFR \u00a7 1029.210",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.311-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1010.311\n\nExplanation: This section requires financial institutions (other than casinos) to file a Currency Transaction Report (CTR) for each transaction in currency of more than $10,000 by, through, or to the institution during any one business day. Multiple currency transactions shall be treated as a single transaction if the financial institution has knowledge that they are by or on behalf of any one person and result in either cash in or cash out totaling more than $10,000 in one business day.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.311-familiar-01": {
+    "text": "31 CFR \u00a7 1010.311\n\nFinancial institutions (other than casinos) must file a report for each transaction in currency of more than $10,000 by, through, or to the institution, unless an exemption applies.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.311-familiar-02": {
+    "text": "31 CFR \u00a7 1010.311\n\nThis section requires financial institutions (other than casinos) to file a Currency Transaction Report (CTR) for each transaction in currency of more than $10,000 by, through, or to the institution.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.311-familiar-03": {
+    "text": "31 CFR \u00a7 1010.311\n\nThe note should state that financial institutions (other than casinos) are required to file a report with FinCEN for each transaction in currency of more than $10,000 by, through, or to the financial institution.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.311-familiar-04": {
+    "text": "31 CFR \u00a7 1010.311",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.313-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1010.313\n\nExplanation: This section requires financial institutions (other than casinos) to treat multiple currency transactions conducted by or on behalf of the same person in one business day as a single transaction for Currency Transaction Report (CTR) filing purposes. The aggregation applies to transactions at one or more branches of the same institution, and the total amount must exceed $10,000 in currency.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.313-familiar-01": {
+    "text": "31 CFR \u00a7 1010.313\n\nSummary: This section requires financial institutions (other than casinos) to treat multiple currency transactions conducted by or on behalf of the same person in one business day as a single transaction for Currency Transaction Report (CTR) filing purposes. However, the rule applies only if the institution knows, suspects, or has reason to suspect that the transactions are by or on behalf of the same person.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.313-familiar-02": {
+    "text": "31 CFR \u00a7 1010.313\n\nThis section requires financial institutions (other than casinos) to aggregate multiple currency transactions conducted by or on behalf of the same person in a single business day when determining whether a Currency Transaction Report (CTR) must be filed.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.313-familiar-03": {
+    "text": "31 CFR \u00a7 1010.313\n\nThe note should state that financial institutions (other than casinos) must aggregate multiple currency transactions conducted by or on behalf of the same person in a single business day to determine if a Currency Transaction Report (CTR) is required.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.313-familiar-04": {
+    "text": "31 CFR \u00a7 1010.313",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.314-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1010.314\n\nExplanation: This section prohibits structuring transactions with one or more domestic financial institutions for the purpose of evading the reporting requirements of 31 CFR \u00a7 1010.311 (currency transaction reports for transactions over $10,000). The prohibition applies regardless of whether the person is aware that structuring is illegal, and it covers both individuals and entities. The rule applies even if the evasion is only attempted, not completed, and regardless of whether the funds are legitimate or illicit.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.314-familiar-01": {
+    "text": "31 CFR \u00a7 1010.314\n\nThis section prohibits structuring or attempting to structure transactions with one or more domestic financial institutions for the purpose of evading the reporting requirements of 31 CFR \u00a7 1010.311 (currency transaction reports). The prohibition applies regardless of whether the person involved is acting on their own behalf or on behalf of another, and regardless of whether the transaction(s) actually succeed in evading reporting.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.314-familiar-02": {
+    "text": "31 CFR \u00a7 1010.314\n\nThis section prohibits structuring transactions with the purpose of evading the currency transaction reporting requirements, making it unlawful to break up transactions to avoid triggering reporting thresholds.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.314-familiar-03": {
+    "text": "31 CFR \u00a7 1010.314\n\nThe note should state: \"It is prohibited for any person to structure or assist in structuring transactions with one or more domestic financial institutions for the purpose of evading the currency transaction reporting requirements.\"",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.314-familiar-04": {
+    "text": "31 CFR \u00a7 1010.314",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.430-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1010.430\n\nExplanation: This section requires that records required by the Bank Secrecy Act must be retained for five years and must be accessible or retrievable within a reasonable period. The requirement applies unless a different retention period is specifically prescribed elsewhere in the regulations.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.430-familiar-01": {
+    "text": "31 CFR \u00a7 1010.430\n\nSummary: Financial institutions must retain required BSA records for five years and make them available for inspection or reproduction by the Secretary of the Treasury or authorized agencies upon request. This requirement is subject to exceptions or additional requirements specified elsewhere in the regulations.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.430-familiar-02": {
+    "text": "31 CFR \u00a7 1010.430\n\nThis section generally requires that records required by the Bank Secrecy Act be retained for five years and be accessible for inspection or reproduction by the appropriate authorities.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.430-familiar-03": {
+    "text": "31 CFR \u00a7 1010.430\n\nThe note should state that BSA records must generally be retained for five years and must be made available for inspection or reproduction upon request by the appropriate authorities.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.430-familiar-04": {
+    "text": "31 CFR \u00a7 1010.430",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.520-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1010.520\n\nExplanation: This section requires financial institutions to search their records for accounts maintained by named suspects when FinCEN relays a government request. The default search scope is for current accounts and those maintained during the preceding 12 months. Institutions must report matches and provide specified account and transaction information, subject to confidentiality and safe harbor provisions.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.520-familiar-01": {
+    "text": "31 CFR \u00a7 1010.520\n\nSummary: When FinCEN relays a government information request about named suspects, financial institutions must search their records for current accounts and accounts maintained during the preceding 12 months. This obligation is limited to the specific named suspects and does not require searching for transactions outside the defined time frame or for individuals not named in the request.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.520-familiar-02": {
+    "text": "31 CFR \u00a7 1010.520\n\nQualified explanation: This section governs procedures for financial institutions to search their records for accounts or transactions matching named suspects when FinCEN relays a government request, specifying a default five-year record search scope.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.520-familiar-03": {
+    "text": "31 CFR \u00a7 1010.520\n\nThe note should state that, by default, the record-search scope for a government information request relayed by FinCEN about named suspects covers transactions occurring within five years preceding the request.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.520-familiar-04": {
+    "text": "31 CFR \u00a7 1010.520",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.540-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1010.540\n\nExplanation: This section governs voluntary information sharing among financial institutions under the USA PATRIOT Act Section 314(b). It requires that before sharing information, a financial institution must provide notice to FinCEN and take reasonable steps to verify that the counterparty is also an eligible financial institution intending to use the information for identifying and reporting possible money laundering or terrorist activities.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.540-familiar-01": {
+    "text": "31 CFR \u00a7 1010.540\n\nSummary: This section permits eligible financial institutions to voluntarily share information with one another regarding individuals, entities, organizations, and countries suspected of possible terrorist or money laundering activities. Before sharing, a financial institution must submit a notice to FinCEN using the designated form. Shared information may only be used for identifying and reporting suspicious activity and must be protected by appropriate procedures to ensure confidentiality. The rule does not override any other applicable laws or regulations, and participation is voluntary.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.540-familiar-02": {
+    "text": "31 CFR \u00a7 1010.540\n\nThis section governs the procedures for voluntary information sharing among financial institutions regarding individuals, entities, organizations, and countries suspected of possible terrorist or money laundering activities, including requirements for notice to FinCEN and counterparty verification.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.540-familiar-03": {
+    "text": "31 CFR \u00a7 1010.540\n\nThe note should state that under 31 CFR \u00a7 1010.540, eligible financial institutions may share information regarding individuals, entities, organizations, and countries for the purposes of identifying and reporting activities that may involve terrorist acts or money laundering, provided they give notice to FinCEN and take reasonable steps to verify that counterparties are also eligible financial institutions.",
+    "finish_reason": "eos"
+  },
+  "cfr-1010.540-familiar-04": {
+    "text": "31 CFR \u00a7 1010.540",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.220-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1020.220\n\nExplanation: This section requires banks to implement a written Customer Identification Program (CIP) appropriate for their size and type of business. The CIP must enable the bank to form a reasonable belief that it knows the true identity of each customer. The program must include risk-based procedures for verifying the identity of customers, using information such as name, date of birth, address, and identification number, and must specify when and how verification will occur, including procedures for handling discrepancies and recordkeeping.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.220-familiar-01": {
+    "text": "31 CFR \u00a7 1020.220\n\nThis section requires banks to implement a written Customer Identification Program (CIP) that enables them to form a reasonable belief that they know the true identity of each customer. The CIP must include risk-based procedures for verifying the identity of customers to the extent reasonable and practicable, and must be appropriate for the bank\u2019s size, location, and type of business. The rule applies to persons opening an account but excludes certain entities such as federally regulated banks and government agencies.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.220-familiar-02": {
+    "text": "31 CFR \u00a7 1020.220\n\nThis section requires banks to implement a written Customer Identification Program (CIP) that enables them to form a reasonable belief that they know the true identity of each customer, as part of their anti-money laundering obligations.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.220-familiar-03": {
+    "text": "31 CFR \u00a7 1020.220\n\nThe note should state that banks must implement a written Customer Identification Program (CIP) appropriate for their size and type of business, designed to enable the bank to form a reasonable belief that it knows the true identity of each customer.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.220-familiar-04": {
+    "text": "31 CFR \u00a7 1020.220",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.320-familiar-00": {
+    "text": "Citation: 31 CFR \u00a7 1020.320\n\nExplanation: This section requires banks to file a Suspicious Activity Report (SAR) when they detect a known or suspected violation of law or a suspicious transaction involving at least $5,000 in funds or assets (or any amount if a suspect can be identified). The requirement applies if the transaction involves potential money laundering, BSA violations, or criminal activity, and includes both attempted and completed transactions. The rule also requires confidentiality and sets timelines for filing.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.320-familiar-01": {
+    "text": "31 CFR \u00a7 1020.320\n\nSummary: Banks must file a suspicious activity report if they detect a known or suspected violation of law or suspicious transaction involving at least $5,000 in funds or assets, where the bank knows, suspects, or has reason to suspect the transaction involves funds from illegal activity, is designed to evade BSA regulations, has no business or apparent lawful purpose, or involves the use of the bank to facilitate criminal activity. The rule does not require reporting for robberies or burglaries reported to law enforcement, or for lost, missing, counterfeit, or stolen securities reported under other regulations.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.320-familiar-02": {
+    "text": "31 CFR \u00a7 1020.320\n\nThis section requires banks to file a Suspicious Activity Report (SAR) when they detect known or suspected violations of law or suspicious transactions involving $5,000 or more, making it the controlling BSA section for bank-specific suspicious-transaction reporting triggers.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.320-familiar-03": {
+    "text": "31 CFR \u00a7 1020.320\n\nThe note should state that banks are required to file a suspicious activity report (SAR) when they detect a known or suspected violation of law or a suspicious transaction relevant to a possible violation of law or regulation, as specified in 31 CFR \u00a7 1020.320.",
+    "finish_reason": "eos"
+  },
+  "cfr-1020.320-familiar-04": {
+    "text": "31 CFR \u00a7 1020.320",
+    "finish_reason": "eos"
+  }
+}
