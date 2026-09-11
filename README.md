@@ -32,8 +32,7 @@ API access or third-party Python packages. It does not run live model inference.
 - [Article, tutorial and book writing kit](release/educational-v1/WRITING_KIT.md)
 - [Source attribution and licenses](release/educational-v1/ATTRIBUTION.md)
 
-Adapter hosting is pending Hugging Face publishing credentials; no public model
-URL is claimed yet. The frozen runtime source is included as an inspectable ZIP.
+Adapter: [Etherlabs/Llama-3.1-8B-IOS-Risk-Educational-v1](https://huggingface.co/Etherlabs/Llama-3.1-8B-IOS-Risk-Educational-v1). All 13 files in the original published snapshot were downloaded anonymously and hash-verified. See [the publication receipt](release/HF_PUBLICATION.json) for the immutable revision and hashes. The frozen runtime source is included as an inspectable ZIP.
 The training notebook preserves the actual private-dataset run and is explicitly
 not a one-click public training notebook. Training receipts, targets, raw outputs,
 original judgments and comparison judgments remain in the release directory.

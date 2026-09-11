@@ -1,0 +1,20 @@
+{
+  "repo_id": "Etherlabs/Llama-3.1-8B-IOS-Risk-Educational-v1",
+  "commit": "308021f3ba42940f09edbe787d0146d9343ac11a",
+  "url": "https://huggingface.co/Etherlabs/Llama-3.1-8B-IOS-Risk-Educational-v1/commit/308021f3ba42940f09edbe787d0146d9343ac11a",
+  "verified_public_files": {
+    "adapter_model.safetensors": "0ea705ee3eef93b7a93d6d0647408fdd75be04f4a9359063835151a02b38365b",
+    "comparison-report.md": "c85aae7852e8b60e52dc281d1ed6f5d41c8eee38c69e0516646200ed06c80333",
+    "tokenizer_config.json": "c65d91c13bc4e187bfc50d7ff4d47331f2ce77b6c3a3a8e8de96bf855b35e6f0",
+    "ATTRIBUTION.md": "9e9837bc7ae8d23e7c68e440e3b5e98cd23d55ca4eefdaf039f47228d07d2d5b",
+    "tokenizer.json": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+    "PROJECT04_HANDOFF.md": "47f4b6c5e4afac1de1c74094c02c3e9c459390d41dbcfadc2b38780ed945e2c6",
+    "README.md": "db99a461cc0525e7cf52fdcf51fa9d534427eb397ca3667bc3a3b430e95dc3ac",
+    "NOTICE.txt": "9b4ce1898c6fdbefd6d0ca4d40a55cb994ed86ae3fd56166866b988bee7a6464",
+    "adapter_config.json": "e2003b763f2b330e5b07cec2ab603ed4b3621594192616a17911d69556bbc2c9",
+    "chat_template.jinja": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+    "LLAMA_LICENSE.txt": "bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712",
+    "runtime.zip": "8a288794a2de97817a3a2a5f60935008f656699faab6c6c32b60a5974586d1a0",
+    "native_manifest.json": "bfd6c4ca1ea44ee6769c3b935034740672b93469a4b437c1777ab5b1c562bc28"
+  }
+}
